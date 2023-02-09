@@ -1,0 +1,482 @@
+nohup: ignoring input
+2023/01/29 09:47:51 New config object fail: error loading source file: open config/settings.dev.yml: no such file or directory
+nohup: ignoring input
+npm ERR! code ENOENT
+npm ERR! syscall open
+npm ERR! path /home/wingwu/go-dev/go-admin/package.json
+npm ERR! errno -2
+npm ERR! enoent ENOENT: no such file or directory, open '/home/wingwu/go-dev/go-admin/package.json'
+npm ERR! enoent This is related to npm not being able to find a file.
+npm ERR! enoent 
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/wingwu/.npm/_logs/2023-01-29T01_51_50_096Z-debug-0.log
+nohup: ignoring input
+2023-01-29 09:54:53.527+0800 info * => [0;0;32mgouser:goupwd@tcp(127.0.0.1:3306)/goadmin?charset=utf8&parseTime=True&loc=Local&timeout=1000ms[0m
+2023-01-29 09:54:53.683+0800 info [0;0;32mmysql connect success ![0m
+2023-01-29 09:54:53.694+0800 trace [32m/home/wingwu/.go/pkg/mod/gorm.io/driver/mysql@v1.3.5/migrator.go:250 [0m[33m[1.577ms] [34;1m[rows:-][0m SELECT DATABASE()
+2023-01-29 09:54:53.781+0800 trace [32m/home/wingwu/.go/pkg/mod/gorm.io/driver/mysql@v1.3.5/migrator.go:253 [0m[33m[86.585ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'goadmin%' ORDER BY SCHEMA_NAME='goadmin' DESC,SCHEMA_NAME limit 1
+2023-01-29 09:54:53.799+0800 trace [32m/home/wingwu/.go/pkg/mod/github.com/go-admin-team/gorm-adapter/v3@v3.7.8-0.20220809100335-eaf9f67b3d21/adapter.go:365 [0m[33m[7.145ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'goadmin' AND table_name = 'sys_casbin_rule' AND table_type = 'BASE TABLE'
+2023-01-29 09:54:53.800+0800 trace [32m/home/wingwu/.go/pkg/mod/gorm.io/driver/mysql@v1.3.5/migrator.go:250 [0m[33m[0.305ms] [34;1m[rows:-][0m SELECT DATABASE()
+2023-01-29 09:54:53.801+0800 trace [32m/home/wingwu/.go/pkg/mod/gorm.io/driver/mysql@v1.3.5/migrator.go:253 [0m[33m[0.773ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'goadmin%' ORDER BY SCHEMA_NAME='goadmin' DESC,SCHEMA_NAME limit 1
+2023-01-29 09:54:53.836+0800 trace [32m/home/wingwu/.go/pkg/mod/gorm.io/driver/mysql@v1.3.5/migrator.go:163 [0m[33m[34.787ms] [34;1m[rows:-][0m SELECT * FROM `sys_casbin_rule` LIMIT 1
+2023-01-29 09:54:53.845+0800 trace [32m/home/wingwu/.go/pkg/mod/gorm.io/driver/mysql@v1.3.5/migrator.go:181 [0m[33m[9.369ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'goadmin' AND table_name = 'sys_casbin_rule' ORDER BY ORDINAL_POSITION
+2023-01-29 09:54:53.846+0800 trace [32m/home/wingwu/.go/pkg/mod/gorm.io/driver/mysql@v1.3.5/migrator.go:250 [0m[33m[0.255ms] [34;1m[rows:-][0m SELECT DATABASE()
+2023-01-29 09:54:53.847+0800 trace [32m/home/wingwu/.go/pkg/mod/gorm.io/driver/mysql@v1.3.5/migrator.go:253 [0m[33m[0.934ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'goadmin%' ORDER BY SCHEMA_NAME='goadmin' DESC,SCHEMA_NAME limit 1
+2023-01-29 09:54:53.850+0800 trace [32m/home/wingwu/.go/pkg/mod/github.com/go-admin-team/gorm-adapter/v3@v3.7.8-0.20220809100335-eaf9f67b3d21/adapter.go:371 [0m[33m[2.068ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'goadmin' AND table_name = 'sys_casbin_rule' AND index_name = 'idx_sys_casbin_rule'
+2023-01-29 09:54:53.869+0800 trace [32m/home/wingwu/.go/pkg/mod/github.com/go-admin-team/gorm-adapter/v3@v3.7.8-0.20220809100335-eaf9f67b3d21/adapter.go:415 [0m[33m[0.545ms] [34;1m[rows:0][0m SELECT * FROM `sys_casbin_rule` ORDER BY ID
+2023-01-29 09:54:53.869+0800 trace [32m/home/wingwu/.go/pkg/mod/github.com/go-admin-team/gorm-adapter/v3@v3.7.8-0.20220809100335-eaf9f67b3d21/adapter.go:415 [0m[33m[0.319ms] [34;1m[rows:0][0m SELECT * FROM `sys_casbin_rule` ORDER BY ID
+2023/01/29 09:54:53 !!! config init
+2023/01/29 09:54:53 starting api server...
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+{"timestamp":"2023-01-29 09:54:53.53290","caller":"rule_manager.go:102","logLevel":"INFO","msg":"[SystemRuleManager] System rules loaded","rules":{"3":[{"metricType":3,"triggerCount":200,"strategy":1}]}}
+[GIN-debug] GET    /api/v1/sysjob            --> go-admin/common/actions.IndexAction.func1 (14 handlers)
+[GIN-debug] GET    /api/v1/sysjob/:id        --> go-admin/common/actions.ViewAction.func1 (14 handlers)
+[GIN-debug] POST   /api/v1/sysjob            --> go-admin/common/actions.CreateAction.func1 (13 handlers)
+[GIN-debug] PUT    /api/v1/sysjob            --> go-admin/common/actions.UpdateAction.func1 (14 handlers)
+[GIN-debug] DELETE /api/v1/sysjob            --> go-admin/common/actions.DeleteAction.func1 (14 handlers)
+[GIN-debug] GET    /api/v1/job/remove/:id    --> go-admin/app/jobs/apis.SysJob.RemoveJobForService-fm (11 handlers)
+[GIN-debug] GET    /api/v1/job/start/:id     --> go-admin/app/jobs/apis.SysJob.StartJobForService-fm (11 handlers)
+[GIN-debug] GET    /api/v1/metrics           --> github.com/go-admin-team/go-admin-core/tools/transfer.Handler.func1 (11 handlers)
+[GIN-debug] GET    /api/v1/health            --> go-admin/app/other/router.registerMonitorRouter.func1 (11 handlers)
+[GIN-debug] POST   /api/v1/public/uploadFile --> go-admin/app/other/apis.File.UploadFile-fm (12 handlers)
+[GIN-debug] GET    /api/v1/captcha           --> go-admin/app/admin/apis.System.GenerateCaptchaHandler-fm (11 handlers)
+[GIN-debug] GET    /api/v1/gen/preview/:tableId --> go-admin/app/other/apis/tools.Gen.Preview-fm (12 handlers)
+[GIN-debug] GET    /api/v1/gen/toproject/:tableId --> go-admin/app/other/apis/tools.Gen.GenCode-fm (12 handlers)
+[GIN-debug] GET    /api/v1/gen/apitofile/:tableId --> go-admin/app/other/apis/tools.Gen.GenApiToFile-fm (12 handlers)
+[GIN-debug] GET    /api/v1/gen/todb/:tableId --> go-admin/app/other/apis/tools.Gen.GenMenuAndApi-fm (12 handlers)
+[GIN-debug] GET    /api/v1/gen/tabletree     --> go-admin/app/other/apis/tools.SysTable.GetSysTablesTree-fm (12 handlers)
+[GIN-debug] GET    /api/v1/db/tables/page    --> go-admin/app/other/apis/tools.(*Gen).GetDBTableList-fm (12 handlers)
+[GIN-debug] GET    /api/v1/db/columns/page   --> go-admin/app/other/apis/tools.(*Gen).GetDBColumnList-fm (12 handlers)
+[GIN-debug] GET    /api/v1/sys/tables/page   --> go-admin/app/other/apis/tools.SysTable.GetPage-fm (12 handlers)
+[GIN-debug] POST   /api/v1/sys/tables/info   --> go-admin/app/other/apis/tools.SysTable.Insert-fm (12 handlers)
+[GIN-debug] PUT    /api/v1/sys/tables/info   --> go-admin/app/other/apis/tools.SysTable.Update-fm (12 handlers)
+[GIN-debug] DELETE /api/v1/sys/tables/info/:tableId --> go-admin/app/other/apis/tools.SysTable.Delete-fm (12 handlers)
+[GIN-debug] GET    /api/v1/sys/tables/info/:tableId --> go-admin/app/other/apis/tools.SysTable.Get-fm (12 handlers)
+[GIN-debug] GET    /api/v1/sys/tables/info   --> go-admin/app/other/apis/tools.SysTable.GetSysTablesInfo-fm (12 handlers)
+[GIN-debug] GET    /api/v1/server-monitor    --> go-admin/app/other/apis.ServerMonitor.ServerInfo-fm (13 handlers)
+[GIN-debug] GET    /                         --> go-admin/app/admin/apis.GoAdmin (11 handlers)
+[GIN-debug] GET    /info                     --> go-admin/common/middleware/handler.Ping (11 handlers)
+2023/01/29 09:54:53 websocket manage start
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (11 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (11 handlers)
+[GIN-debug] GET    /form-generator/*filepath --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (11 handlers)
+[GIN-debug] HEAD   /form-generator/*filepath --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (11 handlers)
+[GIN-debug] GET    /swagger/admin/*any       --> github.com/swaggo/gin-swagger.CustomWrapHandler.func1 (11 handlers)
+[GIN-debug] GET    /ws/:id/:channel          --> github.com/go-admin-team/go-admin-core/sdk/pkg/ws.(*Manager).WsClient-fm (12 handlers)
+[GIN-debug] GET    /wslogout/:id/:channel    --> github.com/go-admin-team/go-admin-core/sdk/pkg/ws.(*Manager).UnWsClient-fm (12 handlers)
+[GIN-debug] POST   /api/v1/login             --> github.com/go-admin-team/go-admin-core/sdk/pkg/jwtauth.(*GinJWTMiddleware).LoginHandler-fm (11 handlers)
+[GIN-debug] GET    /api/v1/refresh_token     --> github.com/go-admin-team/go-admin-core/sdk/pkg/jwtauth.(*GinJWTMiddleware).RefreshHandler-fm (11 handlers)
+[GIN-debug] GET    /api/v1/roleMenuTreeselect/:roleId --> go-admin/app/admin/apis.SysMenu.GetMenuTreeSelect-fm (13 handlers)
+[GIN-debug] GET    /api/v1/roleDeptTreeselect/:roleId --> go-admin/app/admin/apis.SysDept.GetDeptTreeRoleSelect-fm (13 handlers)
+[GIN-debug] POST   /api/v1/logout            --> go-admin/common/middleware/handler.LogOut (13 handlers)
+[GIN-debug] GET    /api/v1/sys-api           --> go-admin/app/admin/apis.SysApi.GetPage-fm (13 handlers)
+[GIN-debug] GET    /api/v1/sys-api/:id       --> go-admin/app/admin/apis.SysApi.Get-fm (13 handlers)
+[GIN-debug] PUT    /api/v1/sys-api/:id       --> go-admin/app/admin/apis.SysApi.Update-fm (13 handlers)
+[GIN-debug] GET    /api/v1/config            --> go-admin/app/admin/apis.SysConfig.GetPage-fm (13 handlers)
+[GIN-debug] GET    /api/v1/config/:id        --> go-admin/app/admin/apis.SysConfig.Get-fm (13 handlers)
+[GIN-debug] POST   /api/v1/config            --> go-admin/app/admin/apis.SysConfig.Insert-fm (13 handlers)
+[GIN-debug] PUT    /api/v1/config/:id        --> go-admin/app/admin/apis.SysConfig.Update-fm (13 handlers)
+[GIN-debug] DELETE /api/v1/config            --> go-admin/app/admin/apis.SysConfig.Delete-fm (13 handlers)
+[GIN-debug] GET    /api/v1/configKey/:configKey --> go-admin/app/admin/apis.SysConfig.GetSysConfigByKEYForService-fm (12 handlers)
+[GIN-debug] GET    /api/v1/app-config        --> go-admin/app/admin/apis.SysConfig.Get2SysApp-fm (11 handlers)
+[GIN-debug] PUT    /api/v1/set-config        --> go-admin/app/admin/apis.SysConfig.Update2Set-fm (12 handlers)
+[GIN-debug] GET    /api/v1/set-config        --> go-admin/app/admin/apis.SysConfig.Get2Set-fm (12 handlers)
+[GIN-debug] GET    /api/v1/dept              --> go-admin/app/admin/apis.SysDept.GetPage-fm (13 handlers)
+[GIN-debug] GET    /api/v1/dept/:id          --> go-admin/app/admin/apis.SysDept.Get-fm (13 handlers)
+[GIN-debug] POST   /api/v1/dept              --> go-admin/app/admin/apis.SysDept.Insert-fm (13 handlers)
+[GIN-debug] PUT    /api/v1/dept/:id          --> go-admin/app/admin/apis.SysDept.Update-fm (13 handlers)
+[GIN-debug] DELETE /api/v1/dept              --> go-admin/app/admin/apis.SysDept.Delete-fm (13 handlers)
+[GIN-debug] GET    /api/v1/deptTree          --> go-admin/app/admin/apis.SysDept.Get2Tree-fm (12 handlers)
+[GIN-debug] GET    /api/v1/dict/data         --> go-admin/app/admin/apis.SysDictData.GetPage-fm (13 handlers)
+[GIN-debug] GET    /api/v1/dict/data/:dictCode --> go-admin/app/admin/apis.SysDictData.Get-fm (13 handlers)
+[GIN-debug] POST   /api/v1/dict/data         --> go-admin/app/admin/apis.SysDictData.Insert-fm (13 handlers)
+[GIN-debug] PUT    /api/v1/dict/data/:dictCode --> go-admin/app/admin/apis.SysDictData.Update-fm (13 handlers)
+[GIN-debug] DELETE /api/v1/dict/data         --> go-admin/app/admin/apis.SysDictData.Delete-fm (13 handlers)
+[GIN-debug] GET    /api/v1/dict/type-option-select --> go-admin/app/admin/apis.SysDictType.GetAll-fm (13 handlers)
+[GIN-debug] GET    /api/v1/dict/type         --> go-admin/app/admin/apis.SysDictType.GetPage-fm (13 handlers)
+[GIN-debug] GET    /api/v1/dict/type/:id     --> go-admin/app/admin/apis.SysDictType.Get-fm (13 handlers)
+[GIN-debug] POST   /api/v1/dict/type         --> go-admin/app/admin/apis.SysDictType.Insert-fm (13 handlers)
+[GIN-debug] PUT    /api/v1/dict/type/:id     --> go-admin/app/admin/apis.SysDictType.Update-fm (13 handlers)
+[GIN-debug] DELETE /api/v1/dict/type         --> go-admin/app/admin/apis.SysDictType.Delete-fm (13 handlers)
+[GIN-debug] GET    /api/v1/dict-data/option-select --> go-admin/app/admin/apis.SysDictData.GetAll-fm (13 handlers)
+[GIN-debug] GET    /api/v1/sys-login-log     --> go-admin/app/admin/apis.SysLoginLog.GetPage-fm (13 handlers)
+[GIN-debug] GET    /api/v1/sys-login-log/:id --> go-admin/app/admin/apis.SysLoginLog.Get-fm (13 handlers)
+[GIN-debug] DELETE /api/v1/sys-login-log     --> go-admin/app/admin/apis.SysLoginLog.Delete-fm (13 handlers)
+[GIN-debug] GET    /api/v1/menu              --> go-admin/app/admin/apis.SysMenu.GetPage-fm (13 handlers)
+[GIN-debug] GET    /api/v1/menu/:id          --> go-admin/app/admin/apis.SysMenu.Get-fm (13 handlers)
+[GIN-debug] POST   /api/v1/menu              --> go-admin/app/admin/apis.SysMenu.Insert-fm (13 handlers)
+[GIN-debug] PUT    /api/v1/menu/:id          --> go-admin/app/admin/apis.SysMenu.Update-fm (13 handlers)
+[GIN-debug] DELETE /api/v1/menu              --> go-admin/app/admin/apis.SysMenu.Delete-fm (13 handlers)
+[GIN-debug] GET    /api/v1/menurole          --> go-admin/app/admin/apis.SysMenu.GetMenuRole-fm (12 handlers)
+[GIN-debug] GET    /api/v1/sys-opera-log     --> go-admin/app/admin/apis.SysOperaLog.GetPage-fm (13 handlers)
+[GIN-debug] GET    /api/v1/sys-opera-log/:id --> go-admin/app/admin/apis.SysOperaLog.Get-fm (13 handlers)
+[GIN-debug] DELETE /api/v1/sys-opera-log     --> go-admin/app/admin/apis.SysOperaLog.Delete-fm (13 handlers)
+[GIN-debug] GET    /api/v1/post              --> go-admin/app/admin/apis.SysPost.GetPage-fm (13 handlers)
+[GIN-debug] GET    /api/v1/post/:id          --> go-admin/app/admin/apis.SysPost.Get-fm (13 handlers)
+[GIN-debug] POST   /api/v1/post              --> go-admin/app/admin/apis.SysPost.Insert-fm (13 handlers)
+[GIN-debug] PUT    /api/v1/post/:id          --> go-admin/app/admin/apis.SysPost.Update-fm (13 handlers)
+[GIN-debug] DELETE /api/v1/post              --> go-admin/app/admin/apis.SysPost.Delete-fm (13 handlers)
+[GIN-debug] GET    /api/v1/role              --> go-admin/app/admin/apis.SysRole.GetPage-fm (13 handlers)
+[GIN-debug] GET    /api/v1/role/:id          --> go-admin/app/admin/apis.SysRole.Get-fm (13 handlers)
+[GIN-debug] POST   /api/v1/role              --> go-admin/app/admin/apis.SysRole.Insert-fm (13 handlers)
+[GIN-debug] PUT    /api/v1/role/:id          --> go-admin/app/admin/apis.SysRole.Update-fm (13 handlers)
+[GIN-debug] DELETE /api/v1/role              --> go-admin/app/admin/apis.SysRole.Delete-fm (13 handlers)
+[GIN-debug] PUT    /api/v1/role-status       --> go-admin/app/admin/apis.SysRole.Update2Status-fm (12 handlers)
+[GIN-debug] PUT    /api/v1/roledatascope     --> go-admin/app/admin/apis.SysRole.Update2DataScope-fm (12 handlers)
+[GIN-debug] GET    /api/v1/sys-user          --> go-admin/app/admin/apis.SysUser.GetPage-fm (14 handlers)
+[GIN-debug] GET    /api/v1/sys-user/:id      --> go-admin/app/admin/apis.SysUser.Get-fm (14 handlers)
+[GIN-debug] POST   /api/v1/sys-user          --> go-admin/app/admin/apis.SysUser.Insert-fm (14 handlers)
+[GIN-debug] PUT    /api/v1/sys-user          --> go-admin/app/admin/apis.SysUser.Update-fm (14 handlers)
+[GIN-debug] DELETE /api/v1/sys-user          --> go-admin/app/admin/apis.SysUser.Delete-fm (14 handlers)
+[GIN-debug] GET    /api/v1/user/profile      --> go-admin/app/admin/apis.SysUser.GetProfile-fm (14 handlers)
+[GIN-debug] POST   /api/v1/user/avatar       --> go-admin/app/admin/apis.SysUser.InsetAvatar-fm (14 handlers)
+[GIN-debug] PUT    /api/v1/user/pwd/set      --> go-admin/app/admin/apis.SysUser.UpdatePwd-fm (14 handlers)
+[GIN-debug] PUT    /api/v1/user/pwd/reset    --> go-admin/app/admin/apis.SysUser.ResetPwd-fm (14 handlers)
+[GIN-debug] PUT    /api/v1/user/status       --> go-admin/app/admin/apis.SysUser.UpdateStatus-fm (14 handlers)
+[GIN-debug] GET    /api/v1/getinfo           --> go-admin/app/admin/apis.SysUser.GetInfo-fm (12 handlers)
+[0;0;31m
+                                                              ____
+                                               ,---,        ,'  , `.  ,--,
+              ,---.      ,---,.              ,---.'|     ,-+-,.' _ |,--.'|         ,---,
+  ,----._,.  '   ,'\   ,'  .' |              |   | :  ,-+-. ;   , |||  |,      ,-+-. /  |
+ /   /  ' / /   /   |,---.'   , ,--.--.      |   | | ,--.'|'   |  ||`--'_     ,--.'|'   |
+|   :     |.   ; ,. :|   |    |/       \   ,--.__| ||   |  ,', |  |,,' ,'|   |   |  ,"' |
+|   | .\  .'   | |: ::   :  .'.--.  .-. | /   ,'   ||   | /  | |--' '  | |   |   | /  | |
+.   ; ';  |'   | .; ::   |.'   \__\/: . ..   '  /  ||   : |  | ,    |  | :   |   | |  | |
+'   .   . ||   :    |`---'     ," .--.; |'   ; |:  ||   : |  |/     '  : |__ |   | |  |/
+ `---`-'| | \   \  /          /  /  ,.  ||   | '/  '|   | |`-'      |  | '.'||   | |--'
+ .'__/\_: |  `----'          ;  :   .'   \   :    :||   ;/          ;  :    ;|   |/
+ |   :    :                  |  ,     .-./\   \  /  '---'           |  ,   / '---'
+  \   \  /                    `--`---'     `----'                    ---`-'
+   `--`-'
+[0m
+欢迎使用 [0;0;32mgo-admin 2.1.0[0m 可以使用 [0;0;31m-h[0m 查看命令 
+
+[0;0;32mServer run at:[0m
+-  Local:   http://localhost:8000/ 
+2023-01-29 09:54:54  [INFO] JobCore Starting...
+-  Network: http://192.168.142.1:8000/ 
+[0;0;32mSwagger run at:[0m
+-  Local:   http://localhost:8000/swagger/admin/index.html 
+-  Network: http://192.168.142.1:8000/swagger/admin/index.html 
+2023-01-29 09:54:54 Enter Control + C Shutdown Server 
+2023-01-29 09:54:54.066+0800 trace [32m/home/wingwu/go-dev/go-admin/app/jobs/models/sys_job.go:48 [0m[33m[28.103ms] [34;1m[rows:0][0m SELECT * FROM `sys_job` WHERE status = 2 AND `sys_job`.`deleted_at` IS NULL
+2023-01-29 09:54:54  [INFO] JobCore total:0
+2023-01-29 09:54:54.105+0800 trace [32m/home/wingwu/go-dev/go-admin/app/jobs/models/sys_job.go:57 [0m[33m[39.008ms] [34;1m[rows:0][0m UPDATE `sys_job` SET `entry_id`=0 WHERE entry_id > 0
+2023-01-29 09:54:54  [INFO] JobCore start success.
+2023-01-29 10:21:48.149+0800 ::1 174.2325ms info GET 200 /api/v1/captcha ed97870f-18fb-4219-ad35-0a72dc7568da 
+2023-01-29 10:21:48.464+0800 trace 147919c4-a80b-45cd-99fd-e86bb0f8da39 [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_config.go:176 [0m[33m[395.125ms] [34;1m[rows:2][0m SELECT * FROM `sys_config` WHERE `sys_config`.`is_frontend` = '1' AND `sys_config`.`deleted_at` IS NULL
+2023-01-29 10:21:48.464+0800 ::1 473.6905ms info GET 200 /api/v1/app-config 147919c4-a80b-45cd-99fd-e86bb0f8da39 
+2023-01-29 10:21:54.239+0800 trace 72c5b747-7288-457f-9ef6-7c570f399f3d [32m/home/wingwu/go-dev/go-admin/common/middleware/handler/login.go:17 [0m[33m[58.616ms] [34;1m[rows:1][0m SELECT * FROM `sys_user` WHERE (username = 'admin'  and status = '2') AND `sys_user`.`deleted_at` IS NULL ORDER BY `sys_user`.`user_id` LIMIT 1
+2023-01-29 10:21:54.382+0800 trace 72c5b747-7288-457f-9ef6-7c570f399f3d [32m/home/wingwu/go-dev/go-admin/common/middleware/handler/login.go:27 [0m[33m[66.795ms] [34;1m[rows:1][0m SELECT * FROM `sys_role` WHERE role_id = 1  AND `sys_role`.`deleted_at` IS NULL ORDER BY `sys_role`.`role_id` LIMIT 1
+2023-01-29 10:21:54.469+0800 trace 94b9ec1c-f65b-4ec5-a2b5-052d5382b466 [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_user.go:49 [0m[33m[1.877ms] [34;1m[rows:1][0m SELECT * FROM `sys_user` WHERE `sys_user`.`user_id` = 1 AND `sys_user`.`deleted_at` IS NULL ORDER BY `sys_user`.`user_id` LIMIT 1
+2023-01-29 10:21:54.469+0800 ::1 54.1805ms info GET 200 /api/v1/getinfo 94b9ec1c-f65b-4ec5-a2b5-052d5382b466 
+2023-01-29 10:21:54.572+0800 trace e3f979f2-ca37-4f4d-b5d2-d650ceb9ddc9 [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_menu.go:401 [0m[33m[90.715ms] [34;1m[rows:25][0m SELECT * FROM `sys_menu` WHERE ( menu_type in ('M','C') and deleted_at is null) AND `sys_menu`.`deleted_at` IS NULL ORDER BY sort
+2023-01-29 10:21:54.573+0800 ::1 99.1012ms info GET 200 /api/v1/menurole e3f979f2-ca37-4f4d-b5d2-d650ceb9ddc9 
+2023-01-29 10:22:10.720+0800 trace d9b0d7e4-32ca-4dd7-a10d-6fb21a2afead [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_user.go:49 [0m[33m[0.825ms] [34;1m[rows:1][0m SELECT * FROM `sys_user` WHERE `sys_user`.`user_id` = 1 AND `sys_user`.`deleted_at` IS NULL ORDER BY `sys_user`.`user_id` LIMIT 1
+2023-01-29 10:22:10.720+0800 ::1 1.2968ms info GET 200 /api/v1/getinfo d9b0d7e4-32ca-4dd7-a10d-6fb21a2afead 
+2023-01-29 10:22:10.779+0800 trace c4d5d3a9-2c2c-40b8-a3af-556f8746b580 [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_menu.go:401 [0m[33m[1.101ms] [34;1m[rows:25][0m SELECT * FROM `sys_menu` WHERE ( menu_type in ('M','C') and deleted_at is null) AND `sys_menu`.`deleted_at` IS NULL ORDER BY sort
+2023-01-29 10:22:10.779+0800 ::1 1.8997ms info GET 200 /api/v1/menurole c4d5d3a9-2c2c-40b8-a3af-556f8746b580 
+2023-01-29 11:07:07.413+0800 trace 8e444c53-de77-4d9d-a1a0-c9548db0ab1d [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_dict_data.go:115 [0m[33m[118.333ms] [34;1m[rows:2][0m SELECT * FROM `sys_dict_data` WHERE `sys_dict_data`.`dict_type` like '%sys_common_status%' AND `sys_dict_data`.`deleted_at` IS NULL
+2023-01-29 11:07:07.413+0800 ::1 199.9901ms info GET 200 /api/v1/dict-data/option-select?dictType=sys_common_status 8e444c53-de77-4d9d-a1a0-c9548db0ab1d 
+2023-01-29 11:07:07.422+0800 trace cc247670-27b2-45bf-b285-5eb1da396b09 [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_opera_log.go:28 [0m[33m[130.954ms] [34;1m[rows:0][0m SELECT * FROM `sys_opera_log` ORDER BY `sys_opera_log`.`created_at` desc LIMIT 10
+2023-01-29 11:07:07.556+0800 trace cc247670-27b2-45bf-b285-5eb1da396b09 [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_opera_log.go:29 [0m[33m[134.523ms] [34;1m[rows:1][0m SELECT count(*) FROM `sys_opera_log` 
+2023-01-29 11:07:07.557+0800 ::1 343.1061ms info GET 200 /api/v1/sys-opera-log?pageIndex=1&pageSize=10&createdAtOrder=desc cc247670-27b2-45bf-b285-5eb1da396b09 
+2023-01-29 11:07:14.692+0800 trace 11cd7649-55da-4dc2-9e2a-55dddbe57682 [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_dict_data.go:115 [0m[33m[0.790ms] [34;1m[rows:2][0m SELECT * FROM `sys_dict_data` WHERE `sys_dict_data`.`dict_type` like '%sys_common_status%' AND `sys_dict_data`.`deleted_at` IS NULL
+2023-01-29 11:07:14.692+0800 ::1 1.256ms info GET 200 /api/v1/dict-data/option-select?dictType=sys_common_status 11cd7649-55da-4dc2-9e2a-55dddbe57682 
+2023-01-29 11:07:14.730+0800 trace 57cbadd9-94f4-425a-abcd-7da9a84ec0d6 [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_login_log.go:28 [0m[33m[38.851ms] [34;1m[rows:0][0m SELECT * FROM `sys_login_log` ORDER BY `sys_login_log`.`created_at` desc LIMIT 10
+2023-01-29 11:07:14.731+0800 trace 57cbadd9-94f4-425a-abcd-7da9a84ec0d6 [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_login_log.go:29 [0m[33m[0.414ms] [34;1m[rows:1][0m SELECT count(*) FROM `sys_login_log` 
+2023-01-29 11:07:37.954+0800 trace c2f9adba-1a39-41b8-86f9-9777b2dcb5ae [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_opera_log.go:28 [0m[33m[0.557ms] [34;1m[rows:0][0m SELECT * FROM `sys_opera_log` ORDER BY `sys_opera_log`.`created_at` desc LIMIT 10
+2023-01-29 11:07:37.954+0800 trace 0367b6e6-ff55-47f9-a3f4-95c1b1f2cb1f [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_dict_data.go:115 [0m[33m[0.829ms] [34;1m[rows:2][0m SELECT * FROM `sys_dict_data` WHERE `sys_dict_data`.`dict_type` like '%sys_common_status%' AND `sys_dict_data`.`deleted_at` IS NULL
+2023-01-29 11:07:37.955+0800 ::1 1.2837ms info GET 200 /api/v1/dict-data/option-select?dictType=sys_common_status 0367b6e6-ff55-47f9-a3f4-95c1b1f2cb1f 
+2023-01-29 11:07:37.955+0800 trace c2f9adba-1a39-41b8-86f9-9777b2dcb5ae [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_opera_log.go:29 [0m[33m[1.187ms] [34;1m[rows:1][0m SELECT count(*) FROM `sys_opera_log` 
+2023-01-29 11:07:37.956+0800 ::1 2.6838ms info GET 200 /api/v1/sys-opera-log?pageIndex=1&pageSize=10&createdAtOrder=desc c2f9adba-1a39-41b8-86f9-9777b2dcb5ae 
+2023-01-29 11:08:07.500+0800 trace ecac9b8e-1e6b-4658-b9af-eb01e015f0ea [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_config.go:108 [0m[33m[0.549ms] [34;1m[rows:5][0m SELECT `sys_config`.`config_key`,`sys_config`.`config_value` FROM `sys_config` WHERE `sys_config`.`deleted_at` IS NULL
+2023-01-29 11:08:07.500+0800 ::1 19.2782ms info GET 200 /api/v1/set-config ecac9b8e-1e6b-4658-b9af-eb01e015f0ea 
+2023-01-29 11:18:06.155+0800 ::1 21.7µs info GET 404 /swagger/index.html 6e59cfd6-2974-4e2b-a681-4b13fd4ec0f0 
+2023-01-29 11:18:12.530+0800 trace 76117281-2c78-4612-aedf-ad5e32e4de79 [32m/home/wingwu/go-dev/go-admin/app/other/models/tools/sys_tables.go:74 [0m[33m[38.982ms] [34;1m[rows:0][0m SELECT * FROM `sys_tables` WHERE `sys_tables`.`deleted_at` IS NULL LIMIT 10
+2023-01-29 11:18:12.530+0800 trace 76117281-2c78-4612-aedf-ad5e32e4de79 [32m/home/wingwu/go-dev/go-admin/app/other/models/tools/sys_tables.go:74 [0m[33m[39.431ms] [34;1m[rows:0][0m SELECT * FROM `sys_tables` WHERE `sys_tables`.`deleted_at` IS NULL LIMIT 10
+2023-01-29 11:18:12.557+0800 trace 1b9786f4-8ead-4a12-851d-fae2bee450fd [32m/home/wingwu/go-dev/go-admin/app/other/models/tools/sys_tables.go:74 [0m[33m[25.903ms] [34;1m[rows:1][0m SELECT count(*) FROM `sys_tables` WHERE `sys_tables`.`deleted_at` IS NULL 
+2023-01-29 11:18:12.557+0800 trace 76117281-2c78-4612-aedf-ad5e32e4de79 [32m/home/wingwu/go-dev/go-admin/app/other/models/tools/sys_tables.go:74 [0m[33m[25.442ms] [34;1m[rows:1][0m SELECT count(*) FROM `sys_tables` WHERE `sys_tables`.`deleted_at` IS NULL 
+2023-01-29 11:18:12.577+0800 ::1 125.2345ms info GET 200 /api/v1/sys/tables/page?pageIndex=1&pageSize=10&beginTime=&endTime= 1b9786f4-8ead-4a12-851d-fae2bee450fd 
+2023-01-29 11:18:12.577+0800 ::1 98.7272ms info GET 200 /api/v1/sys/tables/page?pageIndex=1&pageSize=10 76117281-2c78-4612-aedf-ad5e32e4de79 
+2023-01-29 11:18:20.032+0800 trace 80e7a6dc-71dc-4510-b76b-e203f4755eb6 [32m/home/wingwu/go-dev/go-admin/app/other/models/tools/sys_tables.go:74 [0m[33m[0.824ms] [34;1m[rows:0][0m SELECT * FROM `sys_tables` WHERE `sys_tables`.`deleted_at` IS NULL LIMIT 10
+2023-01-29 11:18:20.033+0800 trace 80e7a6dc-71dc-4510-b76b-e203f4755eb6 [32m/home/wingwu/go-dev/go-admin/app/other/models/tools/sys_tables.go:74 [0m[33m[0.463ms] [34;1m[rows:1][0m SELECT count(*) FROM `sys_tables` WHERE `sys_tables`.`deleted_at` IS NULL 
+2023-01-29 11:18:20.033+0800 ::1 1.657ms info GET 200 /api/v1/sys/tables/page?pageIndex=1&pageSize=10 80e7a6dc-71dc-4510-b76b-e203f4755eb6 
+2023-01-29 11:18:21.807+0800 trace b4208559-efac-48f1-af14-84d32cea4a90 [32m/home/wingwu/go-dev/go-admin/app/other/models/tools/sys_tables.go:74 [0m[33m[0.768ms] [34;1m[rows:0][0m SELECT * FROM `sys_tables` WHERE `sys_tables`.`deleted_at` IS NULL LIMIT 10
+2023-01-29 11:18:21.808+0800 trace b4208559-efac-48f1-af14-84d32cea4a90 [32m/home/wingwu/go-dev/go-admin/app/other/models/tools/sys_tables.go:74 [0m[33m[0.458ms] [34;1m[rows:1][0m SELECT count(*) FROM `sys_tables` WHERE `sys_tables`.`deleted_at` IS NULL 
+2023-01-29 11:18:21.808+0800 ::1 1.7277ms info GET 200 /api/v1/sys/tables/page?pageIndex=1&pageSize=10 b4208559-efac-48f1-af14-84d32cea4a90 
+2023-01-29 13:19:07.910+0800 trace c2733fbe-4bcb-47ab-accd-adb62039dda4 [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_user.go:49 [0m[33m[256.472ms] [34;1m[rows:1][0m SELECT * FROM `sys_user` WHERE `sys_user`.`user_id` = 1 AND `sys_user`.`deleted_at` IS NULL ORDER BY `sys_user`.`user_id` LIMIT 1
+2023-01-29 13:19:07.910+0800 ::1 256.9232ms info GET 200 /api/v1/getinfo c2733fbe-4bcb-47ab-accd-adb62039dda4 
+2023-01-29 13:19:07.975+0800 trace efd28f78-1288-4ef3-9095-0d5a7198974c [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_menu.go:401 [0m[33m[24.327ms] [34;1m[rows:25][0m SELECT * FROM `sys_menu` WHERE ( menu_type in ('M','C') and deleted_at is null) AND `sys_menu`.`deleted_at` IS NULL ORDER BY sort
+2023-01-29 13:19:07.975+0800 ::1 24.88ms info GET 200 /api/v1/menurole efd28f78-1288-4ef3-9095-0d5a7198974c 
+2023-01-29 13:19:12.309+0800 trace acebba2c-c2e4-48d0-bee8-232f17576eaf [32m/home/wingwu/go-dev/go-admin/app/other/models/tools/sys_tables.go:74 [0m[33m[10.742ms] [34;1m[rows:0][0m SELECT * FROM `sys_tables` WHERE `sys_tables`.`deleted_at` IS NULL LIMIT 10
+2023-01-29 13:19:12.322+0800 trace acebba2c-c2e4-48d0-bee8-232f17576eaf [32m/home/wingwu/go-dev/go-admin/app/other/models/tools/sys_tables.go:74 [0m[33m[13.109ms] [34;1m[rows:1][0m SELECT count(*) FROM `sys_tables` WHERE `sys_tables`.`deleted_at` IS NULL 
+2023-01-29 13:19:12.322+0800 ::1 56.6917ms info GET 200 /api/v1/sys/tables/page?pageIndex=1&pageSize=10&beginTime=&endTime= acebba2c-c2e4-48d0-bee8-232f17576eaf 
+2023-01-29 13:19:16.160+0800 trace 134e1d8e-cbba-4437-a9ea-ab5c321e22bb [31;1m/home/wingwu/go-dev/go-admin/app/other/models/tools/db_tables.go:35 [35;1mError 1142: SELECT command denied to user 'gouser'@'localhost' for table 'sys_tables' [0m[33m[111.168ms] [34;1m[rows:0][0m SELECT * FROM `information_schema`.`tables` WHERE TABLE_NAME not in (select table_name from `dbname`.sys_tables)  AND table_schema= 'dbname'  LIMIT 10
+2023-01-29 13:19:16.167+0800 tools/db_tables.go:55 error 134e1d8e-cbba-4437-a9ea-ab5c321e22bb GetPage error, Error 1142: SELECT command denied to user 'gouser'@'localhost' for table 'sys_tables'
+2023-01-29 13:19:16.168+0800 ::1 135.0835ms info GET 200 /api/v1/db/tables/page?pageIndex=1&pageSize=10 134e1d8e-cbba-4437-a9ea-ab5c321e22bb 
+2023-01-29 13:19:55.982+0800 trace 0ea8b7aa-3195-4be3-a8a8-6135b9aabf5f [31;1m/home/wingwu/go-dev/go-admin/app/other/models/tools/db_tables.go:35 [35;1mError 1142: SELECT command denied to user 'gouser'@'localhost' for table 'sys_tables' [0m[33m[0.384ms] [34;1m[rows:0][0m SELECT * FROM `information_schema`.`tables` WHERE TABLE_NAME not in (select table_name from `dbname`.sys_tables)  AND table_schema= 'dbname'  LIMIT 10
+2023-01-29 13:19:55.983+0800 tools/db_tables.go:55 error 0ea8b7aa-3195-4be3-a8a8-6135b9aabf5f GetPage error, Error 1142: SELECT command denied to user 'gouser'@'localhost' for table 'sys_tables'
+2023-01-29 13:19:55.983+0800 ::1 715µs info GET 200 /api/v1/db/tables/page?pageIndex=1&pageSize=10 0ea8b7aa-3195-4be3-a8a8-6135b9aabf5f 
+2023-01-29 13:21:05.997+0800 trace 23ae7f68-6db5-4fe3-a8a9-a8d7c038f695 [31;1m/home/wingwu/go-dev/go-admin/app/other/models/tools/db_tables.go:35 [35;1mError 1142: SELECT command denied to user 'gouser'@'localhost' for table 'sys_tables' [0m[33m[0.552ms] [34;1m[rows:0][0m SELECT * FROM `information_schema`.`tables` WHERE TABLE_NAME not in (select table_name from `dbname`.sys_tables)  AND table_schema= 'dbname'  AND TABLE_NAME = 'WTable' LIMIT 10
+2023-01-29 13:21:05.997+0800 tools/db_tables.go:55 error 23ae7f68-6db5-4fe3-a8a9-a8d7c038f695 GetPage error, Error 1142: SELECT command denied to user 'gouser'@'localhost' for table 'sys_tables'
+2023-01-29 13:21:05.997+0800 ::1 908.9µs info GET 200 /api/v1/db/tables/page?pageIndex=1&pageSize=10&tableName=WTable&tableComment=WTableTest 23ae7f68-6db5-4fe3-a8a9-a8d7c038f695 
+2023-01-29 13:21:08.624+0800 tools/sys_tables.go:171 error 6147a9c9-341c-4630-ad6b-7ab93597881b genTableInit error, table name cannot be empty！
+2023-01-29 13:21:08.624+0800 ::1 7.8837ms info POST 200 /api/v1/sys/tables/info?tables= 6147a9c9-341c-4630-ad6b-7ab93597881b 
+2023-01-29 13:25:15.512+0800 trace c45983e6-d83a-471f-8dd1-21067f7d3257 [31;1m/home/wingwu/go-dev/go-admin/app/other/models/tools/db_tables.go:35 [35;1mError 1142: SELECT command denied to user 'gouser'@'localhost' for table 'sys_tables' [0m[33m[1.078ms] [34;1m[rows:0][0m SELECT * FROM `information_schema`.`tables` WHERE TABLE_NAME not in (select table_name from `dbname`.sys_tables)  AND table_schema= 'dbname'  AND TABLE_NAME = 'WTable' LIMIT 10
+2023-01-29 13:25:15.512+0800 tools/db_tables.go:55 error c45983e6-d83a-471f-8dd1-21067f7d3257 GetPage error, Error 1142: SELECT command denied to user 'gouser'@'localhost' for table 'sys_tables'
+2023-01-29 13:25:15.512+0800 ::1 1.5594ms info GET 200 /api/v1/db/tables/page?pageIndex=1&pageSize=10&tableName=WTable&tableComment=WTableTest c45983e6-d83a-471f-8dd1-21067f7d3257 
+2023-01-29 13:30:58.735+0800 trace 7b2b51f5-bf30-466f-b161-a770b5cbd516 [31;1m/home/wingwu/go-dev/go-admin/app/other/models/tools/db_tables.go:35 [35;1mError 1142: SELECT command denied to user 'gouser'@'localhost' for table 'sys_tables' [0m[33m[0.360ms] [34;1m[rows:0][0m SELECT * FROM `information_schema`.`tables` WHERE TABLE_NAME not in (select table_name from `dbname`.sys_tables)  AND table_schema= 'dbname'  AND TABLE_NAME = 'WTable' LIMIT 10
+2023-01-29 13:30:58.735+0800 tools/db_tables.go:55 error 7b2b51f5-bf30-466f-b161-a770b5cbd516 GetPage error, Error 1142: SELECT command denied to user 'gouser'@'localhost' for table 'sys_tables'
+2023-01-29 13:30:58.735+0800 ::1 833.3µs info GET 200 /api/v1/db/tables/page?pageIndex=1&pageSize=10&tableName=WTable&tableComment=WTableTest 7b2b51f5-bf30-466f-b161-a770b5cbd516 
+2023-01-29 14:11:09.079+0800 ::1 60.7478ms info GET 301 /form-generator/index.html ef65fbe4-1c49-4a7a-8c51-549c4fefddd9 
+2023-01-29 14:11:09.220+0800 ::1 101.7232ms info GET 200 /form-generator/ ae759402-0b74-4377-8cda-05422c62df55 
+2023-01-29 14:11:09.557+0800 ::1 16.8376ms info GET 200 /form-generator/js/index.8e6d9f8f.js 21c9c7f5-af9c-4de6-8f9b-8862b23a3a9f 
+2023-01-29 14:11:09.601+0800 ::1 52.9981ms info GET 200 /form-generator/js/chunk-vendors.971555db.js 82a81b0a-6a08-4bf1-aeb0-c699fe084ee8 
+2023-01-29 14:11:09.759+0800 ::1 220.0533ms info GET 200 /form-generator/css/index.1a124643.css 59d093a8-acf1-4519-8f64-86311909fcd2 
+2023-01-29 14:11:09.770+0800 ::1 3.1375ms info GET 200 /form-generator/css/parser-example.69e16e51.css 0f8c1c14-cb8e-494b-a833-a21f50c9fd37 
+2023-01-29 14:11:09.792+0800 ::1 19.3162ms info GET 200 /form-generator/js/tinymce-example.641995ab.js a81dea05-f986-4a19-9e27-4196da77bfce 
+2023-01-29 14:11:09.803+0800 ::1 37.256ms info GET 200 /form-generator/js/parser-example.ce55fa09.js 5fe6d19f-7f34-4734-93cf-91ab8ac34f5f 
+2023-01-29 14:11:24.826+0800 trace 3737b699-d551-4ffb-8204-0215d4220991 [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_dict_data.go:115 [0m[33m[207.581ms] [34;1m[rows:2][0m SELECT * FROM `sys_dict_data` WHERE `sys_dict_data`.`dict_type` like '%sys_job_status%' AND `sys_dict_data`.`deleted_at` IS NULL
+2023-01-29 14:11:24.902+0800 ::1 487.75ms info GET 200 /api/v1/dict-data/option-select?dictType=sys_job_status 3737b699-d551-4ffb-8204-0215d4220991 
+2023-01-29 14:11:24.913+0800 trace 5f07b7da-0bd8-429d-9bba-4cf0031a18c7 [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_dict_data.go:115 [0m[33m[295.122ms] [34;1m[rows:2][0m SELECT * FROM `sys_dict_data` WHERE `sys_dict_data`.`dict_type` like '%sys_job_group%' AND `sys_dict_data`.`deleted_at` IS NULL
+2023-01-29 14:11:24.913+0800 ::1 395.0084ms info GET 200 /api/v1/dict-data/option-select?dictType=sys_job_group 5f07b7da-0bd8-429d-9bba-4cf0031a18c7 
+2023-01-29 14:11:24.974+0800 trace a014e185-388a-4029-9f3e-1febf1ed53f9 [32m/home/wingwu/go-dev/go-admin/common/actions/permission.go:54 [0m[33m[501.962ms] [34;1m[rows:1][0m SELECT sys_user.user_id,sys_role.role_id,sys_user.dept_id,sys_role.data_scope FROM `sys_user` left join sys_role on sys_role.role_id = sys_user.role_id WHERE sys_user.user_id = '1'
+2023-01-29 14:11:24.995+0800 trace a014e185-388a-4029-9f3e-1febf1ed53f9 [32m/home/wingwu/go-dev/go-admin/common/actions/index.go:48 [0m[33m[13.214ms] [34;1m[rows:2][0m SELECT * FROM `sys_job` WHERE `sys_job`.`deleted_at` IS NULL LIMIT 10
+2023-01-29 14:11:24.996+0800 trace a014e185-388a-4029-9f3e-1febf1ed53f9 [32m/home/wingwu/go-dev/go-admin/common/actions/index.go:49 [0m[33m[0.356ms] [34;1m[rows:1][0m SELECT count(*) FROM `sys_job` WHERE `sys_job`.`deleted_at` IS NULL 
+2023-01-29 14:11:25.052+0800 ::1 639.5018ms info GET 200 /api/v1/sysjob?pageIndex=1&pageSize=10&beginTime=&endTime= a014e185-388a-4029-9f3e-1febf1ed53f9 
+2023-01-29 14:11:34.515+0800 trace 49bf4d80-1677-428f-a602-7fbc2b9a2ab5 [32m/home/wingwu/go-dev/go-admin/common/actions/permission.go:54 [0m[33m[0.947ms] [34;1m[rows:1][0m SELECT sys_user.user_id,sys_role.role_id,sys_user.dept_id,sys_role.data_scope FROM `sys_user` left join sys_role on sys_role.role_id = sys_user.role_id WHERE sys_user.user_id = '1'
+2023-01-29 14:11:34.536+0800 trace 49bf4d80-1677-428f-a602-7fbc2b9a2ab5 [32m/home/wingwu/go-dev/go-admin/common/actions/view.go:53 [0m[33m[2.189ms] [34;1m[rows:1][0m SELECT `sys_job`.`job_id`,`sys_job`.`job_name`,`sys_job`.`job_group`,`sys_job`.`job_type`,`sys_job`.`cron_expression`,`sys_job`.`invoke_target`,`sys_job`.`args`,`sys_job`.`misfire_policy`,`sys_job`.`concurrent`,`sys_job`.`status`,`sys_job`.`entry_id` FROM `sys_job` WHERE `sys_job`.`job_id` = 1 AND `sys_job`.`deleted_at` IS NULL ORDER BY `sys_job`.`job_id` LIMIT 1
+2023-01-29 14:11:34.537+0800 ::1 22.4477ms info GET 200 /api/v1/sysjob/1 49bf4d80-1677-428f-a602-7fbc2b9a2ab5 
+2023-01-29 14:13:15.612+0800 trace 0a0a26c6-82af-4e0a-998a-6fa49dbcff4f [32m/home/wingwu/go-dev/go-admin/app/other/models/tools/sys_tables.go:74 [0m[33m[26.528ms] [34;1m[rows:1][0m SELECT * FROM `sys_tables` WHERE `sys_tables`.`deleted_at` IS NULL LIMIT 10
+2023-01-29 14:13:15.612+0800 trace 0a0a26c6-82af-4e0a-998a-6fa49dbcff4f [32m/home/wingwu/go-dev/go-admin/app/other/models/tools/sys_tables.go:74 [0m[33m[0.650ms] [34;1m[rows:1][0m SELECT count(*) FROM `sys_tables` WHERE `sys_tables`.`deleted_at` IS NULL 
+2023-01-29 14:13:15.613+0800 ::1 27.7904ms info GET 200 /api/v1/sys/tables/page?pageIndex=1&pageSize=10&beginTime=&endTime= 0a0a26c6-82af-4e0a-998a-6fa49dbcff4f 
+2023-01-29 14:13:15.613+0800 trace 5997d9f0-01f9-4af8-a4c3-f30b1cacd154 [32m/home/wingwu/go-dev/go-admin/app/other/models/tools/sys_tables.go:74 [0m[33m[0.790ms] [34;1m[rows:1][0m SELECT * FROM `sys_tables` WHERE `sys_tables`.`deleted_at` IS NULL LIMIT 10
+2023-01-29 14:13:15.614+0800 trace 5997d9f0-01f9-4af8-a4c3-f30b1cacd154 [32m/home/wingwu/go-dev/go-admin/app/other/models/tools/sys_tables.go:74 [0m[33m[0.534ms] [34;1m[rows:1][0m SELECT count(*) FROM `sys_tables` WHERE `sys_tables`.`deleted_at` IS NULL 
+2023-01-29 14:13:15.615+0800 ::1 2.7044ms info GET 200 /api/v1/sys/tables/page?pageIndex=1&pageSize=10 5997d9f0-01f9-4af8-a4c3-f30b1cacd154 
+2023-01-29 14:13:26.427+0800 trace 6d8ca343-021b-4c9b-8c94-e581179dcdde [31;1m/home/wingwu/go-dev/go-admin/app/other/models/tools/db_tables.go:35 [35;1mError 1142: SELECT command denied to user 'gouser'@'localhost' for table 'sys_tables' [0m[33m[0.384ms] [34;1m[rows:0][0m SELECT * FROM `information_schema`.`tables` WHERE TABLE_NAME not in (select table_name from `dbname`.sys_tables)  AND table_schema= 'dbname'  LIMIT 10
+2023-01-29 14:13:26.427+0800 tools/db_tables.go:55 error 6d8ca343-021b-4c9b-8c94-e581179dcdde GetPage error, Error 1142: SELECT command denied to user 'gouser'@'localhost' for table 'sys_tables'
+2023-01-29 14:13:26.427+0800 ::1 668.2µs info GET 200 /api/v1/db/tables/page?pageIndex=1&pageSize=10 6d8ca343-021b-4c9b-8c94-e581179dcdde 
+2023-01-29 14:13:30.084+0800 trace a17c33ae-56e4-403c-9fcf-17ac0d7ce379 [32m/home/wingwu/go-dev/go-admin/app/other/models/tools/sys_tables.go:96 [0m[33m[0.858ms] [34;1m[rows:1][0m SELECT * FROM `sys_tables` WHERE table_id = 1 AND `sys_tables`.`deleted_at` IS NULL ORDER BY `sys_tables`.`table_id` LIMIT 1
+2023-01-29 14:13:30.293+0800 trace a17c33ae-56e4-403c-9fcf-17ac0d7ce379 [32m/home/wingwu/go-dev/go-admin/app/other/models/tools/sys_columns.go:69 [0m[33m[208.164ms] [34;1m[rows:0][0m SELECT * FROM `sys_columns` WHERE table_id = 1 
+2023-01-29 14:13:30.326+0800 ::1 430.1811ms info GET 200 /api/v1/gen/preview/1 a17c33ae-56e4-403c-9fcf-17ac0d7ce379 
+2023-01-29 14:21:06.710+0800 trace abdd1d1c-bfd9-4550-8313-2d103fbfc35f [32m/home/wingwu/go-dev/go-admin/app/other/models/tools/sys_tables.go:96 [0m[33m[2.844ms] [34;1m[rows:1][0m SELECT * FROM `sys_tables` WHERE table_id = 1 AND `sys_tables`.`deleted_at` IS NULL ORDER BY `sys_tables`.`table_id` LIMIT 1
+2023-01-29 14:21:06.713+0800 trace abdd1d1c-bfd9-4550-8313-2d103fbfc35f [32m/home/wingwu/go-dev/go-admin/app/other/models/tools/sys_columns.go:69 [0m[33m[1.937ms] [34;1m[rows:0][0m SELECT * FROM `sys_columns` WHERE table_id = 1  AND  column_name not in('id','create_by','update_by','created_at','updated_at','deleted_at')
+2023-01-29 14:21:06.713+0800 ::1 5.9937ms info GET 200 /api/v1/sys/tables/info/1 abdd1d1c-bfd9-4550-8313-2d103fbfc35f 
+2023-01-29 14:21:06.716+0800 trace 57cf9c19-ff46-4b8f-b842-c0a5eecd75c9 [32m/home/wingwu/go-dev/go-admin/app/other/models/tools/sys_tables.go:123 [0m[33m[0.525ms] [34;1m[rows:1][0m SELECT * FROM `sys_tables` WHERE `sys_tables`.`deleted_at` IS NULL
+2023-01-29 14:21:06.720+0800 trace 57cf9c19-ff46-4b8f-b842-c0a5eecd75c9 [32m/home/wingwu/go-dev/go-admin/app/other/models/tools/sys_columns.go:69 [0m[33m[0.720ms] [34;1m[rows:0][0m SELECT * FROM `sys_columns` WHERE table_id = 1 
+2023-01-29 14:21:06.720+0800 ::1 4.7287ms info GET 200 /api/v1/gen/tabletree 57cf9c19-ff46-4b8f-b842-c0a5eecd75c9 
+2023-01-29 14:21:06.786+0800 trace 3ae2de72-3090-4e8e-b80a-24b322c541c9 [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_dict_type.go:118 [0m[33m[69.964ms] [34;1m[rows:11][0m SELECT * FROM `sys_dict_type` WHERE `sys_dict_type`.`deleted_at` IS NULL
+2023-01-29 14:21:06.786+0800 ::1 70.4303ms info GET 200 /api/v1/dict/type-option-select 3ae2de72-3090-4e8e-b80a-24b322c541c9 
+2023-01-29 14:24:21.254+0800 trace 93c9c17c-5ff0-433c-bc84-9d63ad05b4d7 [32m/home/wingwu/go-dev/go-admin/common/actions/permission.go:54 [0m[33m[1.616ms] [34;1m[rows:1][0m SELECT sys_user.user_id,sys_role.role_id,sys_user.dept_id,sys_role.data_scope FROM `sys_user` left join sys_role on sys_role.role_id = sys_user.role_id WHERE sys_user.user_id = '1'
+2023-01-29 14:24:21.256+0800 trace 0f79f1cb-cf0f-49fd-8594-e327f93ef107 [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_dict_data.go:115 [0m[33m[3.363ms] [34;1m[rows:2][0m SELECT * FROM `sys_dict_data` WHERE `sys_dict_data`.`dict_type` like '%sys_job_group%' AND `sys_dict_data`.`deleted_at` IS NULL
+2023-01-29 14:24:21.256+0800 ::1 3.7448ms info GET 200 /api/v1/dict-data/option-select?dictType=sys_job_group 0f79f1cb-cf0f-49fd-8594-e327f93ef107 
+2023-01-29 14:24:21.257+0800 trace 93c9c17c-5ff0-433c-bc84-9d63ad05b4d7 [32m/home/wingwu/go-dev/go-admin/common/actions/index.go:48 [0m[33m[2.079ms] [34;1m[rows:2][0m SELECT * FROM `sys_job` WHERE `sys_job`.`deleted_at` IS NULL LIMIT 10
+2023-01-29 14:24:21.258+0800 trace 93c9c17c-5ff0-433c-bc84-9d63ad05b4d7 [32m/home/wingwu/go-dev/go-admin/common/actions/index.go:49 [0m[33m[1.083ms] [34;1m[rows:1][0m SELECT count(*) FROM `sys_job` WHERE `sys_job`.`deleted_at` IS NULL 
+2023-01-29 14:24:21.258+0800 ::1 5.3818ms info GET 200 /api/v1/sysjob?pageIndex=1&pageSize=10&beginTime=&endTime= 93c9c17c-5ff0-433c-bc84-9d63ad05b4d7 
+2023-01-29 14:24:21.272+0800 trace 803388e9-23e1-4021-afa2-f32b5ccefecf [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_dict_data.go:115 [0m[33m[18.912ms] [34;1m[rows:2][0m SELECT * FROM `sys_dict_data` WHERE `sys_dict_data`.`dict_type` like '%sys_job_status%' AND `sys_dict_data`.`deleted_at` IS NULL
+2023-01-29 14:24:21.272+0800 ::1 19.1648ms info GET 200 /api/v1/dict-data/option-select?dictType=sys_job_status 803388e9-23e1-4021-afa2-f32b5ccefecf 
+2023-01-29 14:24:28.563+0800 ::1 916.1µs info GET 301 /form-generator/index.html dedcca2e-7803-4445-a2d6-cdba31dbb91e 
+2023-01-29 14:24:28.567+0800 ::1 2.1019ms info GET 200 /form-generator/ 51114375-6aae-42ef-8db1-9bfd3554af1b 
+2023-01-29 14:24:29.922+0800 ::1 1.8525ms info GET 200 /form-generator/css/index.1a124643.css c61cef35-48f7-4735-96af-be8b5d22ec47 
+2023-01-29 14:24:29.970+0800 ::1 13.0388ms info GET 200 /form-generator/js/index.8e6d9f8f.js 1bb828b5-5d80-45c1-aa79-b267c0f453b3 
+2023-01-29 14:24:29.971+0800 ::1 15.5857ms info GET 200 /form-generator/js/chunk-vendors.971555db.js 6f861104-8ab5-42fa-b7c6-36305196d423 
+2023-01-29 14:24:30.240+0800 ::1 628.8µs info GET 200 /form-generator/css/parser-example.69e16e51.css 4e14a341-98bd-409c-8990-8049771c939a 
+2023-01-29 14:24:30.240+0800 ::1 1.0345ms info GET 200 /form-generator/js/parser-example.ce55fa09.js c8c15f95-3799-452c-9f2a-f3526883c219 
+2023-01-29 14:24:30.243+0800 ::1 1.4859ms info GET 200 /form-generator/js/tinymce-example.641995ab.js d1627a59-ac18-4a57-b610-0ce1bb8816d3 
+2023-01-29 14:24:30.982+0800 ::1 84.3584ms info GET 200 /form-generator/img/logo.e1bc3747.png b5d100c1-d68d-4bb7-a477-1f206a50be18 
+2023-01-29 14:25:23.897+0800 ::1 30.2262ms info GET 200 /form-generator/preview.html df2e14ba-86be-431e-9ded-1a6f7c113438 
+2023-01-29 14:25:23.931+0800 ::1 2.2437ms info GET 200 /form-generator/js/chunk-vendors.971555db.js dd7d204c-7ee2-489d-9438-0554d4c02f74 
+2023-01-29 14:25:23.951+0800 ::1 21.3523ms info GET 200 /form-generator/js/preview.8ce4e0db.js 3660e37e-1fa0-458e-9d94-b09fe9528ee4 
+2023-01-29 14:28:35.417+0800 trace 17e178f2-a9cd-4b68-904a-9f636e6551aa [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_user.go:49 [0m[33m[1.281ms] [34;1m[rows:1][0m SELECT * FROM `sys_user` WHERE `sys_user`.`user_id` = 1 AND `sys_user`.`deleted_at` IS NULL ORDER BY `sys_user`.`user_id` LIMIT 1
+2023-01-29 14:28:35.417+0800 ::1 2.0883ms info GET 200 /api/v1/getinfo 17e178f2-a9cd-4b68-904a-9f636e6551aa 
+2023-01-29 14:28:35.442+0800 trace 153820c8-49a6-4866-9d08-196f1dad431e [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_menu.go:401 [0m[33m[16.462ms] [34;1m[rows:25][0m SELECT * FROM `sys_menu` WHERE ( menu_type in ('M','C') and deleted_at is null) AND `sys_menu`.`deleted_at` IS NULL ORDER BY sort
+2023-01-29 14:28:35.442+0800 ::1 16.9459ms info GET 200 /api/v1/menurole 153820c8-49a6-4866-9d08-196f1dad431e 
+2023-01-29 14:28:36.560+0800 ::1 324.7µs info GET 301 /form-generator/index.html 8045b919-8b8d-422f-b341-6f53d105d573 
+2023-01-29 14:28:36.564+0800 ::1 770.1µs info GET 200 /form-generator/ d80e5334-a425-4303-b967-645607313f61 
+2023-01-29 14:28:37.604+0800 ::1 2.1486ms info GET 200 /form-generator/css/index.1a124643.css 61cca210-d7b6-4ebb-b659-13918c23fdb1 
+2023-01-29 14:28:37.633+0800 ::1 7.7004ms info GET 200 /form-generator/js/index.8e6d9f8f.js 90f8104f-b86c-4e7f-bc1f-43690f86f81c 
+2023-01-29 14:28:37.637+0800 ::1 20.5514ms info GET 200 /form-generator/js/chunk-vendors.971555db.js 269084da-8ead-4dd4-acd4-fe1d47729eda 
+2023-01-29 14:28:37.685+0800 ::1 521.3µs info GET 200 /form-generator/css/parser-example.69e16e51.css ed251a0c-30df-4283-a8e2-2a224fed2baa 
+2023-01-29 14:28:37.686+0800 ::1 2.1062ms info GET 200 /form-generator/js/parser-example.ce55fa09.js 57f34244-cddd-4c25-bc56-2d5d116faab6 
+2023-01-29 14:28:37.686+0800 ::1 664.5µs info GET 200 /form-generator/js/tinymce-example.641995ab.js 3c25f42a-363c-43a2-a1f4-c63d9e7c5407 
+2023-01-29 14:28:37.973+0800 ::1 1.7858ms info GET 200 /form-generator/img/logo.e1bc3747.png 927dbad1-3d5c-491b-a168-d6225204d572 
+2023-01-29 14:28:43.233+0800 ::1 570µs info GET 200 /form-generator/preview.html a5c82a99-2084-4d35-ac87-29bb364b8cf8 
+2023-01-29 14:28:43.254+0800 ::1 2.5256ms info GET 200 /form-generator/js/preview.8ce4e0db.js 5c05dca5-b36d-4277-b25d-188a22c1d4d2 
+2023-01-29 14:28:43.257+0800 ::1 5.87ms info GET 200 /form-generator/js/chunk-vendors.971555db.js 76389e47-d74d-4922-a147-b68f8b7ffdad 
+2023-01-29 14:30:16.823+0800 trace 1473fb6d-a24f-443f-90ee-58d6ece6fe1b [32m/home/wingwu/go-dev/go-admin/app/other/models/tools/sys_tables.go:74 [0m[33m[1.202ms] [34;1m[rows:1][0m SELECT * FROM `sys_tables` WHERE `sys_tables`.`deleted_at` IS NULL LIMIT 10
+2023-01-29 14:30:16.824+0800 trace 1473fb6d-a24f-443f-90ee-58d6ece6fe1b [32m/home/wingwu/go-dev/go-admin/app/other/models/tools/sys_tables.go:74 [0m[33m[0.571ms] [34;1m[rows:1][0m SELECT count(*) FROM `sys_tables` WHERE `sys_tables`.`deleted_at` IS NULL 
+2023-01-29 14:30:16.824+0800 ::1 2.2958ms info GET 200 /api/v1/sys/tables/page?pageIndex=1&pageSize=10&beginTime=&endTime= 1473fb6d-a24f-443f-90ee-58d6ece6fe1b 
+2023-01-29 14:30:16.824+0800 trace f40252ec-cde1-4d7e-afbc-e98020910398 [32m/home/wingwu/go-dev/go-admin/app/other/models/tools/sys_tables.go:74 [0m[33m[0.610ms] [34;1m[rows:1][0m SELECT * FROM `sys_tables` WHERE `sys_tables`.`deleted_at` IS NULL LIMIT 10
+2023-01-29 14:30:16.826+0800 trace f40252ec-cde1-4d7e-afbc-e98020910398 [32m/home/wingwu/go-dev/go-admin/app/other/models/tools/sys_tables.go:74 [0m[33m[1.717ms] [34;1m[rows:1][0m SELECT count(*) FROM `sys_tables` WHERE `sys_tables`.`deleted_at` IS NULL 
+2023-01-29 14:30:16.826+0800 ::1 2.7447ms info GET 200 /api/v1/sys/tables/page?pageIndex=1&pageSize=10 f40252ec-cde1-4d7e-afbc-e98020910398 
+2023-01-29 14:31:00.021+0800 ::1 326.2µs info GET 301 /form-generator/index.html 5a77f748-5e8f-4541-948c-6bd73cf134a3 
+2023-01-29 14:31:00.027+0800 ::1 3.9258ms info GET 200 /form-generator/ 1aad3aae-f903-42bd-b2d7-f679c96c8bdc 
+2023-01-29 14:31:00.294+0800 ::1 4.0659ms info GET 200 /form-generator/css/index.1a124643.css 2894ec87-6250-424e-bc74-c3d988b8c9f5 
+2023-01-29 14:31:00.298+0800 ::1 3.7922ms info GET 200 /form-generator/js/chunk-vendors.971555db.js 989192ec-c51d-4b74-bf07-ec5f73a0baac 
+2023-01-29 14:31:00.298+0800 ::1 2.3548ms info GET 200 /form-generator/js/index.8e6d9f8f.js ff94e4dc-27c6-4be3-b455-f3d6dd5eb095 
+2023-01-29 14:31:00.340+0800 ::1 650.5µs info GET 200 /form-generator/css/parser-example.69e16e51.css 9af52dda-71a6-43f4-95e2-9fa46b357720 
+2023-01-29 14:31:00.340+0800 ::1 461.2µs info GET 200 /form-generator/js/tinymce-example.641995ab.js 3783b82f-bd92-499c-b17c-eb2c9cdbc439 
+2023-01-29 14:31:00.340+0800 ::1 663.2µs info GET 200 /form-generator/js/parser-example.ce55fa09.js b2c211f3-49b0-4852-ba15-e64cc2788204 
+2023-01-29 14:31:00.628+0800 ::1 856.8µs info GET 200 /form-generator/img/logo.e1bc3747.png f5c67637-003f-4600-8154-747696e66d42 
+2023-01-29 14:31:08.200+0800 trace 3b989920-46ef-493d-bd26-4b45403f73aa [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_dict_data.go:115 [0m[33m[1.105ms] [34;1m[rows:2][0m SELECT * FROM `sys_dict_data` WHERE `sys_dict_data`.`dict_type` like '%sys_normal_disable%' AND `sys_dict_data`.`deleted_at` IS NULL
+2023-01-29 14:31:08.200+0800 ::1 1.434ms info GET 200 /api/v1/dict-data/option-select?dictType=sys_normal_disable 3b989920-46ef-493d-bd26-4b45403f73aa 
+2023-01-29 14:31:08.225+0800 trace 74c4aa0c-a5fe-4da1-971b-801c07f7863b [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_menu.go:215 [0m[33m[2.528ms] [34;1m[rows:68][0m SELECT * FROM `sys_menu` WHERE `sys_menu`.`deleted_at` IS NULL
+2023-01-29 14:31:08.276+0800 ::1 77.7902ms info GET 200 /api/v1/roleMenuTreeselect/0 74c4aa0c-a5fe-4da1-971b-801c07f7863b 
+2023-01-29 14:31:08.415+0800 trace 18406de0-ac00-4767-920b-0926db97f1f5 [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_role.go:33 [0m[33m[28.205ms] [34;1m[rows:0][0m SELECT * FROM `sys_role_menu` WHERE `sys_role_menu`.`role_id` = 1
+2023-01-29 14:31:08.415+0800 trace 18406de0-ac00-4767-920b-0926db97f1f5 [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_role.go:33 [0m[33m[183.327ms] [34;1m[rows:1][0m SELECT * FROM `sys_role` WHERE `sys_role`.`deleted_at` IS NULL LIMIT 10
+2023-01-29 14:31:08.416+0800 trace 18406de0-ac00-4767-920b-0926db97f1f5 [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_role.go:34 [0m[33m[0.950ms] [34;1m[rows:1][0m SELECT count(*) FROM `sys_role` WHERE `sys_role`.`deleted_at` IS NULL 
+2023-01-29 14:31:08.417+0800 ::1 217.9412ms info GET 200 /api/v1/role?pageIndex=1&pageSize=10 18406de0-ac00-4767-920b-0926db97f1f5 
+2023-01-29 14:31:21.121+0800 trace 976f3942-765a-4405-b3a6-2c07b8de3d7a [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_dict_data.go:115 [0m[33m[1.015ms] [34;1m[rows:2][0m SELECT * FROM `sys_dict_data` WHERE `sys_dict_data`.`dict_type` like '%sys_normal_disable%' AND `sys_dict_data`.`deleted_at` IS NULL
+2023-01-29 14:31:21.122+0800 ::1 1.4057ms info GET 200 /api/v1/dict-data/option-select?dictType=sys_normal_disable 976f3942-765a-4405-b3a6-2c07b8de3d7a 
+2023-01-29 14:31:21.183+0800 trace fa117ea8-bfff-4068-94ad-414942a46841 [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_post.go:28 [0m[33m[41.880ms] [34;1m[rows:3][0m SELECT * FROM `sys_post` WHERE `sys_post`.`deleted_at` IS NULL LIMIT 10
+2023-01-29 14:31:21.184+0800 trace fa117ea8-bfff-4068-94ad-414942a46841 [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_post.go:29 [0m[33m[0.391ms] [34;1m[rows:1][0m SELECT count(*) FROM `sys_post` WHERE `sys_post`.`deleted_at` IS NULL 
+2023-01-29 14:31:21.184+0800 ::1 63.6935ms info GET 200 /api/v1/post?pageIndex=1&pageSize=10 fa117ea8-bfff-4068-94ad-414942a46841 
+2023-01-29 14:31:26.300+0800 trace 779a5e01-b338-4e8f-9243-11e6a87c4988 [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_role.go:33 [0m[33m[0.641ms] [34;1m[rows:0][0m SELECT * FROM `sys_role_menu` WHERE `sys_role_menu`.`role_id` = 1
+2023-01-29 14:31:26.300+0800 trace 779a5e01-b338-4e8f-9243-11e6a87c4988 [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_role.go:33 [0m[33m[1.655ms] [34;1m[rows:1][0m SELECT * FROM `sys_role` WHERE `sys_role`.`deleted_at` IS NULL LIMIT 10
+2023-01-29 14:31:26.301+0800 trace e28d8c75-796e-4f1b-8fa8-646ebf6aca93 [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_dict_data.go:115 [0m[33m[1.354ms] [34;1m[rows:2][0m SELECT * FROM `sys_dict_data` WHERE `sys_dict_data`.`dict_type` like '%sys_normal_disable%' AND `sys_dict_data`.`deleted_at` IS NULL
+2023-01-29 14:31:26.301+0800 trace 779a5e01-b338-4e8f-9243-11e6a87c4988 [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_role.go:34 [0m[33m[0.491ms] [34;1m[rows:1][0m SELECT count(*) FROM `sys_role` WHERE `sys_role`.`deleted_at` IS NULL 
+2023-01-29 14:31:26.301+0800 ::1 2.6471ms info GET 200 /api/v1/role?pageIndex=1&pageSize=10 779a5e01-b338-4e8f-9243-11e6a87c4988 
+2023-01-29 14:31:26.301+0800 ::1 1.7433ms info GET 200 /api/v1/dict-data/option-select?dictType=sys_normal_disable e28d8c75-796e-4f1b-8fa8-646ebf6aca93 
+2023-01-29 14:31:26.311+0800 trace bfc87fe8-22ea-457a-ac62-fed67d7e2430 [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_menu.go:215 [0m[33m[11.310ms] [34;1m[rows:68][0m SELECT * FROM `sys_menu` WHERE `sys_menu`.`deleted_at` IS NULL
+2023-01-29 14:31:26.311+0800 ::1 11.66ms info GET 200 /api/v1/roleMenuTreeselect/0 bfc87fe8-22ea-457a-ac62-fed67d7e2430 
+2023-01-29 14:31:28.459+0800 trace 29ecbd86-db1d-43f3-9bcf-a157c5df6c09 [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_dict_data.go:115 [0m[33m[1.156ms] [34;1m[rows:2][0m SELECT * FROM `sys_dict_data` WHERE `sys_dict_data`.`dict_type` like '%sys_normal_disable%' AND `sys_dict_data`.`deleted_at` IS NULL
+2023-01-29 14:31:28.459+0800 ::1 1.4274ms info GET 200 /api/v1/dict-data/option-select?dictType=sys_normal_disable 29ecbd86-db1d-43f3-9bcf-a157c5df6c09 
+2023-01-29 14:31:28.471+0800 trace 8a596634-f8e6-42eb-abee-60be0e5346bc [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_dict_type.go:28 [0m[33m[0.815ms] [34;1m[rows:10][0m SELECT * FROM `sys_dict_type` WHERE `sys_dict_type`.`deleted_at` IS NULL LIMIT 10
+2023-01-29 14:31:28.472+0800 trace 8a596634-f8e6-42eb-abee-60be0e5346bc [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_dict_type.go:29 [0m[33m[0.496ms] [34;1m[rows:1][0m SELECT count(*) FROM `sys_dict_type` WHERE `sys_dict_type`.`deleted_at` IS NULL 
+2023-01-29 14:31:28.475+0800 ::1 4.5124ms info GET 200 /api/v1/dict/type?pageIndex=1&pageSize=10 8a596634-f8e6-42eb-abee-60be0e5346bc 
+2023-01-29 14:31:45.828+0800 trace 0f72f5be-6987-4226-91b9-9ce16d145bdf [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_dict_type.go:28 [0m[33m[0.714ms] [34;1m[rows:11][0m SELECT * FROM `sys_dict_type` WHERE `sys_dict_type`.`deleted_at` IS NULL LIMIT 1000
+2023-01-29 14:31:45.828+0800 trace e645364c-0abb-40e0-b812-19ce37ff2f23 [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_dict_data.go:115 [0m[33m[1.179ms] [34;1m[rows:2][0m SELECT * FROM `sys_dict_data` WHERE `sys_dict_data`.`dict_type` like '%sys_normal_disable%' AND `sys_dict_data`.`deleted_at` IS NULL
+2023-01-29 14:31:45.829+0800 ::1 1.5268ms info GET 200 /api/v1/dict-data/option-select?dictType=sys_normal_disable e645364c-0abb-40e0-b812-19ce37ff2f23 
+2023-01-29 14:31:45.829+0800 trace 0f72f5be-6987-4226-91b9-9ce16d145bdf [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_dict_type.go:29 [0m[33m[0.965ms] [34;1m[rows:1][0m SELECT count(*) FROM `sys_dict_type` WHERE `sys_dict_type`.`deleted_at` IS NULL 
+2023-01-29 14:31:45.830+0800 ::1 2.6271ms info GET 200 /api/v1/dict/type?pageSize=1000 0f72f5be-6987-4226-91b9-9ce16d145bdf 
+2023-01-29 14:31:45.837+0800 trace f498a06b-bc09-4398-8e9f-db8160a7d892 [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_dict_type.go:41 [0m[33m[0.890ms] [34;1m[rows:1][0m SELECT * FROM `sys_dict_type` WHERE `sys_dict_type`.`dict_id` = 2 AND `sys_dict_type`.`deleted_at` IS NULL ORDER BY `sys_dict_type`.`dict_id` LIMIT 1
+2023-01-29 14:31:45.838+0800 ::1 10.9827ms info GET 200 /api/v1/dict/type/2 f498a06b-bc09-4398-8e9f-db8160a7d892 
+2023-01-29 14:31:45.889+0800 trace 4ec4ba2e-4319-40d6-a8c9-54eb745517fb [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_dict_data.go:28 [0m[33m[1.381ms] [34;1m[rows:3][0m SELECT * FROM `sys_dict_data` WHERE `sys_dict_data`.`dict_type` like '%sys_user_sex%' AND `sys_dict_data`.`deleted_at` IS NULL LIMIT 10
+2023-01-29 14:31:45.892+0800 trace 4ec4ba2e-4319-40d6-a8c9-54eb745517fb [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_dict_data.go:29 [0m[33m[2.633ms] [34;1m[rows:1][0m SELECT count(*) FROM `sys_dict_data` WHERE `sys_dict_data`.`dict_type` like '%sys_user_sex%' AND `sys_dict_data`.`deleted_at` IS NULL 
+2023-01-29 14:31:45.893+0800 ::1 11.5933ms info GET 200 /api/v1/dict/data?dictType=sys_user_sex&pageIndex=1&pageSize=10&dictType=sys_user_sex 4ec4ba2e-4319-40d6-a8c9-54eb745517fb 
+2023-01-29 14:31:57.167+0800 trace d47e8a8b-b9e2-4fe9-a3fe-61a62995be52 [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_dict_type.go:28 [0m[33m[0.572ms] [34;1m[rows:10][0m SELECT * FROM `sys_dict_type` WHERE `sys_dict_type`.`deleted_at` IS NULL LIMIT 10
+2023-01-29 14:31:57.168+0800 trace d84347b6-dd27-494d-814d-1673224b62bd [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_dict_data.go:115 [0m[33m[1.403ms] [34;1m[rows:2][0m SELECT * FROM `sys_dict_data` WHERE `sys_dict_data`.`dict_type` like '%sys_normal_disable%' AND `sys_dict_data`.`deleted_at` IS NULL
+2023-01-29 14:31:57.168+0800 ::1 1.7572ms info GET 200 /api/v1/dict-data/option-select?dictType=sys_normal_disable d84347b6-dd27-494d-814d-1673224b62bd 
+2023-01-29 14:31:57.168+0800 trace d47e8a8b-b9e2-4fe9-a3fe-61a62995be52 [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_dict_type.go:29 [0m[33m[1.404ms] [34;1m[rows:1][0m SELECT count(*) FROM `sys_dict_type` WHERE `sys_dict_type`.`deleted_at` IS NULL 
+2023-01-29 14:31:57.169+0800 ::1 2.6713ms info GET 200 /api/v1/dict/type?pageIndex=1&pageSize=10 d47e8a8b-b9e2-4fe9-a3fe-61a62995be52 
+2023-01-29 14:31:59.166+0800 trace 8225af3d-b71b-4aec-b8cf-d6d90a48966b [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_dict_data.go:115 [0m[33m[1.146ms] [34;1m[rows:2][0m SELECT * FROM `sys_dict_data` WHERE `sys_dict_data`.`dict_type` like '%sys_normal_disable%' AND `sys_dict_data`.`deleted_at` IS NULL
+2023-01-29 14:31:59.166+0800 ::1 1.8596ms info GET 200 /api/v1/dict-data/option-select?dictType=sys_normal_disable 8225af3d-b71b-4aec-b8cf-d6d90a48966b 
+2023-01-29 14:31:59.168+0800 trace cec378e4-051d-4462-aebb-abdc8120b1ca [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_role.go:33 [0m[33m[2.569ms] [34;1m[rows:0][0m SELECT * FROM `sys_role_menu` WHERE `sys_role_menu`.`role_id` = 1
+2023-01-29 14:31:59.169+0800 trace cec378e4-051d-4462-aebb-abdc8120b1ca [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_role.go:33 [0m[33m[3.787ms] [34;1m[rows:1][0m SELECT * FROM `sys_role` WHERE `sys_role`.`deleted_at` IS NULL LIMIT 10
+2023-01-29 14:31:59.169+0800 trace cec378e4-051d-4462-aebb-abdc8120b1ca [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_role.go:34 [0m[33m[0.416ms] [34;1m[rows:1][0m SELECT count(*) FROM `sys_role` WHERE `sys_role`.`deleted_at` IS NULL 
+2023-01-29 14:31:59.169+0800 ::1 4.7828ms info GET 200 /api/v1/role?pageIndex=1&pageSize=10 cec378e4-051d-4462-aebb-abdc8120b1ca 
+2023-01-29 14:31:59.171+0800 trace 241d8986-7382-4bfc-a711-4d321784d0e9 [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_menu.go:215 [0m[33m[5.488ms] [34;1m[rows:68][0m SELECT * FROM `sys_menu` WHERE `sys_menu`.`deleted_at` IS NULL
+2023-01-29 14:31:59.171+0800 ::1 5.924ms info GET 200 /api/v1/roleMenuTreeselect/0 241d8986-7382-4bfc-a711-4d321784d0e9 
+2023-01-29 14:32:26.300+0800 trace c5ec6f16-3a2f-4ace-918f-f05bbe7dcb2e [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_dict_data.go:115 [0m[33m[1.164ms] [34;1m[rows:3][0m SELECT * FROM `sys_dict_data` WHERE `sys_dict_data`.`dict_type` like '%sys_user_sex%' AND `sys_dict_data`.`deleted_at` IS NULL
+2023-01-29 14:32:26.301+0800 ::1 1.5639ms info GET 200 /api/v1/dict-data/option-select?dictType=sys_user_sex c5ec6f16-3a2f-4ace-918f-f05bbe7dcb2e 
+2023-01-29 14:32:26.310+0800 trace 86624a78-3d6b-4555-b111-e81060a0f21a [32m/home/wingwu/go-dev/go-admin/common/actions/permission.go:54 [0m[33m[0.827ms] [34;1m[rows:1][0m SELECT sys_user.user_id,sys_role.role_id,sys_user.dept_id,sys_role.data_scope FROM `sys_user` left join sys_role on sys_role.role_id = sys_user.role_id WHERE sys_user.user_id = '1'
+2023-01-29 14:32:26.323+0800 trace 1eaf0d0f-d7c5-40b7-b848-703696dbaaec [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_dict_data.go:115 [0m[33m[1.763ms] [34;1m[rows:2][0m SELECT * FROM `sys_dict_data` WHERE `sys_dict_data`.`dict_type` like '%sys_normal_disable%' AND `sys_dict_data`.`deleted_at` IS NULL
+2023-01-29 14:32:26.324+0800 ::1 2.1965ms info GET 200 /api/v1/dict-data/option-select?dictType=sys_normal_disable 1eaf0d0f-d7c5-40b7-b848-703696dbaaec 
+2023-01-29 14:32:26.407+0800 trace 7a747bec-f0b3-417b-b5d3-620126284c09 [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_config.go:161 [0m[33m[85.361ms] [34;1m[rows:1][0m SELECT * FROM `sys_config` WHERE config_key = 'sys_user_initPassword' ORDER BY `sys_config`.`config_key` LIMIT 1
+2023-01-29 14:32:26.408+0800 ::1 85.9043ms info GET 200 /api/v1/configKey/sys_user_initPassword 7a747bec-f0b3-417b-b5d3-620126284c09 
+2023-01-29 14:32:26.432+0800 trace 86624a78-3d6b-4555-b111-e81060a0f21a [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_user.go:32 [0m[33m[72.686ms] [34;1m[rows:1][0m SELECT * FROM `sys_dept` WHERE `sys_dept`.`dept_id` = 1 AND `sys_dept`.`deleted_at` IS NULL
+2023-01-29 14:32:26.432+0800 trace 86624a78-3d6b-4555-b111-e81060a0f21a [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_user.go:32 [0m[33m[98.331ms] [34;1m[rows:1][0m SELECT * FROM `sys_user` WHERE `sys_user`.`deleted_at` IS NULL LIMIT 10
+2023-01-29 14:32:26.432+0800 trace 94974cba-75ed-4255-9920-ae80fa89239d [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_dept.go:156 [0m[33m[110.308ms] [34;1m[rows:5][0m SELECT * FROM `sys_dept` WHERE `sys_dept`.`deleted_at` IS NULL
+2023-01-29 14:32:26.432+0800 ::1 110.9179ms info GET 200 /api/v1/deptTree 94974cba-75ed-4255-9920-ae80fa89239d 
+2023-01-29 14:32:26.433+0800 trace 86624a78-3d6b-4555-b111-e81060a0f21a [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_user.go:33 [0m[33m[0.472ms] [34;1m[rows:1][0m SELECT count(*) FROM `sys_user` WHERE `sys_user`.`deleted_at` IS NULL 
+2023-01-29 14:32:26.433+0800 ::1 123.637ms info GET 200 /api/v1/sys-user?pageIndex=1&pageSize=10 86624a78-3d6b-4555-b111-e81060a0f21a 
+2023-01-29 14:32:28.344+0800 trace 38905c75-eaa3-45ce-b904-8252fa56d4b6 [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_dept.go:156 [0m[33m[0.664ms] [34;1m[rows:5][0m SELECT * FROM `sys_dept` WHERE `sys_dept`.`deleted_at` IS NULL
+2023-01-29 14:32:28.344+0800 ::1 991.8µs info GET 200 /api/v1/deptTree 38905c75-eaa3-45ce-b904-8252fa56d4b6 
+2023-01-29 14:32:28.346+0800 trace 35556bd3-b21e-46c8-a54b-129758d5fb3c [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_post.go:28 [0m[33m[1.109ms] [34;1m[rows:3][0m SELECT * FROM `sys_post` WHERE `sys_post`.`deleted_at` IS NULL LIMIT 1000
+2023-01-29 14:32:28.346+0800 trace 35556bd3-b21e-46c8-a54b-129758d5fb3c [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_post.go:29 [0m[33m[0.343ms] [34;1m[rows:1][0m SELECT count(*) FROM `sys_post` WHERE `sys_post`.`deleted_at` IS NULL 
+2023-01-29 14:32:28.347+0800 ::1 1.9189ms info GET 200 /api/v1/post?pageSize=1000 35556bd3-b21e-46c8-a54b-129758d5fb3c 
+2023-01-29 14:32:28.348+0800 trace ceebc550-9617-489f-bc20-61aa0cb767bd [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_role.go:33 [0m[33m[2.016ms] [34;1m[rows:0][0m SELECT * FROM `sys_role_menu` WHERE `sys_role_menu`.`role_id` = 1
+2023-01-29 14:32:28.348+0800 trace ceebc550-9617-489f-bc20-61aa0cb767bd [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_role.go:33 [0m[33m[2.743ms] [34;1m[rows:1][0m SELECT * FROM `sys_role` WHERE `sys_role`.`deleted_at` IS NULL LIMIT 1000
+2023-01-29 14:32:28.349+0800 trace ceebc550-9617-489f-bc20-61aa0cb767bd [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_role.go:34 [0m[33m[0.422ms] [34;1m[rows:1][0m SELECT count(*) FROM `sys_role` WHERE `sys_role`.`deleted_at` IS NULL 
+2023-01-29 14:32:28.349+0800 ::1 3.5766ms info GET 200 /api/v1/role?pageSize=1000 ceebc550-9617-489f-bc20-61aa0cb767bd 
+2023-01-29 14:33:12.368+0800 trace 0807b06f-f5d0-4407-8ebe-d32875b06266 [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_dept.go:156 [0m[33m[1.512ms] [34;1m[rows:5][0m SELECT * FROM `sys_dept` WHERE `sys_dept`.`deleted_at` IS NULL
+2023-01-29 14:33:12.368+0800 ::1 2.2649ms info GET 200 /api/v1/deptTree 0807b06f-f5d0-4407-8ebe-d32875b06266 
+2023-01-29 14:33:12.369+0800 trace 72eaf4a4-5310-4464-b004-4a38fba47ff4 [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_post.go:28 [0m[33m[0.986ms] [34;1m[rows:3][0m SELECT * FROM `sys_post` WHERE `sys_post`.`deleted_at` IS NULL LIMIT 1000
+2023-01-29 14:33:12.370+0800 trace 72eaf4a4-5310-4464-b004-4a38fba47ff4 [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_post.go:29 [0m[33m[0.772ms] [34;1m[rows:1][0m SELECT count(*) FROM `sys_post` WHERE `sys_post`.`deleted_at` IS NULL 
+2023-01-29 14:33:12.370+0800 ::1 2.3277ms info GET 200 /api/v1/post?pageSize=1000 72eaf4a4-5310-4464-b004-4a38fba47ff4 
+2023-01-29 14:33:12.374+0800 trace 83d9ace5-2894-43d7-9c1b-fe57ccfee1bb [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_role.go:33 [0m[33m[3.485ms] [34;1m[rows:0][0m SELECT * FROM `sys_role_menu` WHERE `sys_role_menu`.`role_id` = 1
+2023-01-29 14:33:12.374+0800 trace 83d9ace5-2894-43d7-9c1b-fe57ccfee1bb [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_role.go:33 [0m[33m[6.554ms] [34;1m[rows:1][0m SELECT * FROM `sys_role` WHERE `sys_role`.`deleted_at` IS NULL LIMIT 1000
+2023-01-29 14:33:12.375+0800 trace 83d9ace5-2894-43d7-9c1b-fe57ccfee1bb [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_role.go:34 [0m[33m[0.429ms] [34;1m[rows:1][0m SELECT count(*) FROM `sys_role` WHERE `sys_role`.`deleted_at` IS NULL 
+2023-01-29 14:33:12.375+0800 ::1 7.3957ms info GET 200 /api/v1/role?pageSize=1000 83d9ace5-2894-43d7-9c1b-fe57ccfee1bb 
+2023-01-29 14:33:55.125+0800 trace 33e601f0-39ef-45b5-8033-707ddc3911f7 [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_dict_data.go:115 [0m[33m[1.227ms] [34;1m[rows:2][0m SELECT * FROM `sys_dict_data` WHERE `sys_dict_data`.`dict_type` like '%sys_yes_no%' AND `sys_dict_data`.`deleted_at` IS NULL
+2023-01-29 14:33:55.125+0800 ::1 1.6416ms info GET 200 /api/v1/dict-data/option-select?dictType=sys_yes_no 33e601f0-39ef-45b5-8033-707ddc3911f7 
+2023-01-29 14:33:55.133+0800 trace bcd5bd61-5695-4d68-ab91-26165f212811 [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_config.go:25 [0m[33m[0.946ms] [34;1m[rows:5][0m SELECT * FROM `sys_config` WHERE `sys_config`.`deleted_at` IS NULL ORDER BY `sys_config`.`created_at` desc LIMIT 10
+2023-01-29 14:33:55.134+0800 trace bcd5bd61-5695-4d68-ab91-26165f212811 [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_config.go:26 [0m[33m[0.403ms] [34;1m[rows:1][0m SELECT count(*) FROM `sys_config` WHERE `sys_config`.`deleted_at` IS NULL 
+2023-01-29 14:33:55.134+0800 ::1 10.4586ms info GET 200 /api/v1/config?pageIndex=1&pageSize=10&createdAtOrder=desc bcd5bd61-5695-4d68-ab91-26165f212811 
+2023-01-29 14:34:19.924+0800 warn 07467001-5783-478c-ac3f-c29cd6923f91 request body is not present anymore. 
+2023-01-29 14:34:19.925+0800 trace 07467001-5783-478c-ac3f-c29cd6923f91 [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_config.go:36 [0m[33m[0.784ms] [34;1m[rows:1][0m SELECT * FROM `sys_config` WHERE `sys_config`.`id` = 4 AND `sys_config`.`deleted_at` IS NULL ORDER BY `sys_config`.`id` LIMIT 1
+2023-01-29 14:34:19.925+0800 ::1 27.9001ms info GET 200 /api/v1/config/4 07467001-5783-478c-ac3f-c29cd6923f91 
+2023-01-29 14:34:38.293+0800 warn 8caa5f31-8c1b-4a0c-b58b-f64b98ece4ef request body is not present anymore. 
+2023-01-29 14:34:38.294+0800 trace 8caa5f31-8c1b-4a0c-b58b-f64b98ece4ef [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_config.go:36 [0m[33m[0.977ms] [34;1m[rows:1][0m SELECT * FROM `sys_config` WHERE `sys_config`.`id` = 1 AND `sys_config`.`deleted_at` IS NULL ORDER BY `sys_config`.`id` LIMIT 1
+2023-01-29 14:34:38.294+0800 ::1 1.3602ms info GET 200 /api/v1/config/1 8caa5f31-8c1b-4a0c-b58b-f64b98ece4ef 
+2023-01-29 14:36:20.291+0800 warn 12da073e-2d7d-481b-ae44-07dd3f910dc0 request body is not present anymore. 
+2023-01-29 14:36:20.292+0800 trace 12da073e-2d7d-481b-ae44-07dd3f910dc0 [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_config.go:36 [0m[33m[0.783ms] [34;1m[rows:1][0m SELECT * FROM `sys_config` WHERE `sys_config`.`id` = 3 AND `sys_config`.`deleted_at` IS NULL ORDER BY `sys_config`.`id` LIMIT 1
+2023-01-29 14:36:20.293+0800 ::1 1.1616ms info GET 200 /api/v1/config/3 12da073e-2d7d-481b-ae44-07dd3f910dc0 
+2023-01-29 14:36:27.734+0800 warn 6798e4cb-de45-45d0-81f5-6110118c6950 request body is not present anymore. 
+2023-01-29 14:36:27.735+0800 trace 6798e4cb-de45-45d0-81f5-6110118c6950 [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_config.go:36 [0m[33m[1.192ms] [34;1m[rows:1][0m SELECT * FROM `sys_config` WHERE `sys_config`.`id` = 2 AND `sys_config`.`deleted_at` IS NULL ORDER BY `sys_config`.`id` LIMIT 1
+2023-01-29 14:36:27.735+0800 ::1 1.732ms info GET 200 /api/v1/config/2 6798e4cb-de45-45d0-81f5-6110118c6950 
+2023-01-29 14:36:37.046+0800 warn ef34be43-4b01-4e76-9502-198e2585bbd4 request body is not present anymore. 
+2023-01-29 14:36:37.047+0800 trace ef34be43-4b01-4e76-9502-198e2585bbd4 [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_config.go:36 [0m[33m[0.746ms] [34;1m[rows:1][0m SELECT * FROM `sys_config` WHERE `sys_config`.`id` = 1 AND `sys_config`.`deleted_at` IS NULL ORDER BY `sys_config`.`id` LIMIT 1
+2023-01-29 14:36:37.047+0800 ::1 1.2026ms info GET 200 /api/v1/config/1 ef34be43-4b01-4e76-9502-198e2585bbd4 
+2023-01-29 14:36:46.622+0800 warn 649f10fd-a40d-4712-bb36-e545ce64c57d request body is not present anymore. 
+2023-01-29 14:36:46.623+0800 trace 649f10fd-a40d-4712-bb36-e545ce64c57d [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_config.go:36 [0m[33m[0.750ms] [34;1m[rows:1][0m SELECT * FROM `sys_config` WHERE `sys_config`.`id` = 1 AND `sys_config`.`deleted_at` IS NULL ORDER BY `sys_config`.`id` LIMIT 1
+2023-01-29 14:36:46.623+0800 ::1 1.114ms info GET 200 /api/v1/config/1 649f10fd-a40d-4712-bb36-e545ce64c57d 
+2023-01-29 14:37:00.089+0800 trace 4ebcb83c-0b3c-4e24-b156-0c5829881545 [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_dict_data.go:115 [0m[33m[0.899ms] [34;1m[rows:2][0m SELECT * FROM `sys_dict_data` WHERE `sys_dict_data`.`dict_type` like '%sys_common_status%' AND `sys_dict_data`.`deleted_at` IS NULL
+2023-01-29 14:37:00.089+0800 ::1 1.2675ms info GET 200 /api/v1/dict-data/option-select?dictType=sys_common_status 4ebcb83c-0b3c-4e24-b156-0c5829881545 
+2023-01-29 14:37:00.102+0800 trace 4397e515-411b-472a-a21f-9ef92ed62bde [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_opera_log.go:28 [0m[33m[2.905ms] [34;1m[rows:0][0m SELECT * FROM `sys_opera_log` ORDER BY `sys_opera_log`.`created_at` desc LIMIT 10
+2023-01-29 14:37:00.145+0800 trace 4397e515-411b-472a-a21f-9ef92ed62bde [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_opera_log.go:29 [0m[33m[43.376ms] [34;1m[rows:1][0m SELECT count(*) FROM `sys_opera_log` 
+2023-01-29 14:37:00.145+0800 ::1 57.8579ms info GET 200 /api/v1/sys-opera-log?pageIndex=1&pageSize=10&createdAtOrder=desc 4397e515-411b-472a-a21f-9ef92ed62bde 
+2023-01-29 14:37:03.527+0800 trace dbe60fde-10ff-4f04-bf6c-47952f9e1b4f [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_opera_log.go:28 [0m[33m[0.613ms] [34;1m[rows:0][0m SELECT * FROM `sys_opera_log` ORDER BY `sys_opera_log`.`created_at` desc LIMIT 10
+2023-01-29 14:37:03.527+0800 trace dbe60fde-10ff-4f04-bf6c-47952f9e1b4f [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_opera_log.go:29 [0m[33m[0.339ms] [34;1m[rows:1][0m SELECT count(*) FROM `sys_opera_log` 
+2023-01-29 14:37:03.527+0800 ::1 1.2328ms info GET 200 /api/v1/sys-opera-log?pageIndex=1&pageSize=10&createdAtOrder=desc dbe60fde-10ff-4f04-bf6c-47952f9e1b4f 
+2023-01-29 14:37:09.640+0800 trace 7fb81384-2180-4ee7-a02c-6ea4dac8ca5f [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_opera_log.go:28 [0m[33m[0.917ms] [34;1m[rows:0][0m SELECT * FROM `sys_opera_log` WHERE `sys_opera_log`.`status` = 2 ORDER BY `sys_opera_log`.`created_at` desc LIMIT 10
+2023-01-29 14:37:09.641+0800 trace 7fb81384-2180-4ee7-a02c-6ea4dac8ca5f [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_opera_log.go:29 [0m[33m[1.296ms] [34;1m[rows:1][0m SELECT count(*) FROM `sys_opera_log` WHERE `sys_opera_log`.`status` = 2 
+2023-01-29 14:37:09.641+0800 ::1 2.6832ms info GET 200 /api/v1/sys-opera-log?pageIndex=1&pageSize=10&status=2&createdAtOrder=desc 7fb81384-2180-4ee7-a02c-6ea4dac8ca5f 
+2023-01-29 14:37:35.769+0800 trace f1716296-7e89-4fbb-96be-3d4aa424f5a6 [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_opera_log.go:28 [0m[33m[15.280ms] [34;1m[rows:0][0m SELECT * FROM `sys_opera_log` WHERE `sys_opera_log`.`created_at` >= '2023-01-27 00:00:00' AND `sys_opera_log`.`created_at` <= '2023-02-28 00:00:00' AND `sys_opera_log`.`status` = 2 ORDER BY `sys_opera_log`.`created_at` desc LIMIT 10
+2023-01-29 14:37:35.770+0800 trace f1716296-7e89-4fbb-96be-3d4aa424f5a6 [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_opera_log.go:29 [0m[33m[0.709ms] [34;1m[rows:1][0m SELECT count(*) FROM `sys_opera_log` WHERE `sys_opera_log`.`created_at` >= '2023-01-27 00:00:00' AND `sys_opera_log`.`created_at` <= '2023-02-28 00:00:00' AND `sys_opera_log`.`status` = 2 
+2023-01-29 14:37:35.770+0800 ::1 16.554ms info GET 200 /api/v1/sys-opera-log?pageIndex=1&pageSize=10&status=2&createdAtOrder=desc&beginTime=2023-01-27+00:00:00&endTime=2023-02-28+00:00:00 f1716296-7e89-4fbb-96be-3d4aa424f5a6 
+2023-01-29 14:38:17.793+0800 trace c5e9c4e4-b950-473d-933c-9a1c88fbd56a [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_opera_log.go:28 [0m[33m[1.000ms] [34;1m[rows:0][0m SELECT * FROM `sys_opera_log` WHERE `sys_opera_log`.`created_at` >= '2023-01-26 00:00:00' AND `sys_opera_log`.`created_at` <= '2023-02-01 00:00:00' AND `sys_opera_log`.`status` = 2 ORDER BY `sys_opera_log`.`created_at` desc LIMIT 10
+2023-01-29 14:38:17.794+0800 trace c5e9c4e4-b950-473d-933c-9a1c88fbd56a [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_opera_log.go:29 [0m[33m[0.750ms] [34;1m[rows:1][0m SELECT count(*) FROM `sys_opera_log` WHERE `sys_opera_log`.`created_at` >= '2023-01-26 00:00:00' AND `sys_opera_log`.`created_at` <= '2023-02-01 00:00:00' AND `sys_opera_log`.`status` = 2 
+2023-01-29 14:38:17.794+0800 ::1 2.2964ms info GET 200 /api/v1/sys-opera-log?pageIndex=1&pageSize=10&status=2&createdAtOrder=desc&beginTime=2023-01-26+00:00:00&endTime=2023-02-01+00:00:00 c5e9c4e4-b950-473d-933c-9a1c88fbd56a 
+2023-01-29 14:38:30.952+0800 trace 467906d5-1fd5-4cc7-9b1e-23ec6128dbb9 [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_dict_data.go:115 [0m[33m[1.025ms] [34;1m[rows:2][0m SELECT * FROM `sys_dict_data` WHERE `sys_dict_data`.`dict_type` like '%sys_common_status%' AND `sys_dict_data`.`deleted_at` IS NULL
+2023-01-29 14:38:30.952+0800 ::1 1.2947ms info GET 200 /api/v1/dict-data/option-select?dictType=sys_common_status 467906d5-1fd5-4cc7-9b1e-23ec6128dbb9 
+2023-01-29 14:38:30.973+0800 trace 0d8e0c70-99a1-4e3b-9530-1aad61cdea26 [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_login_log.go:28 [0m[33m[12.189ms] [34;1m[rows:0][0m SELECT * FROM `sys_login_log` ORDER BY `sys_login_log`.`created_at` desc LIMIT 10
+2023-01-29 14:38:30.973+0800 trace 0d8e0c70-99a1-4e3b-9530-1aad61cdea26 [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_login_log.go:29 [0m[33m[0.481ms] [34;1m[rows:1][0m SELECT count(*) FROM `sys_login_log` 
+2023-01-29 14:39:44.256+0800 trace d912bac0-6668-48ae-8503-dcaee2d76ec5 [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_config.go:108 [0m[33m[0.530ms] [34;1m[rows:5][0m SELECT `sys_config`.`config_key`,`sys_config`.`config_value` FROM `sys_config` WHERE `sys_config`.`deleted_at` IS NULL
+2023-01-29 14:39:44.256+0800 ::1 897.4µs info GET 200 /api/v1/set-config d912bac0-6668-48ae-8503-dcaee2d76ec5 
+2023-01-29 14:41:03.115+0800 trace 16b18450-701e-4965-9414-6be34811024b [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_api.go:32 [0m[33m[49.831ms] [34;1m[rows:10][0m SELECT * FROM `sys_api` WHERE `sys_api`.`deleted_at` IS NULL LIMIT 10
+2023-01-29 14:41:03.116+0800 trace 16b18450-701e-4965-9414-6be34811024b [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_api.go:33 [0m[33m[0.500ms] [34;1m[rows:1][0m SELECT count(*) FROM `sys_api` WHERE `sys_api`.`deleted_at` IS NULL 
+2023-01-29 14:41:03.116+0800 ::1 61.7741ms info GET 200 /api/v1/sys-api?pageIndex=1&pageSize=10 16b18450-701e-4965-9414-6be34811024b 
+2023-01-29 14:41:07.815+0800 trace 2b6844bf-f251-4a91-9a70-336f32f11eb3 [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_api.go:32 [0m[33m[19.114ms] [34;1m[rows:10][0m SELECT * FROM `sys_api` WHERE `sys_api`.`deleted_at` IS NULL LIMIT 10 OFFSET 10
+2023-01-29 14:41:07.816+0800 trace 2b6844bf-f251-4a91-9a70-336f32f11eb3 [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_api.go:33 [0m[33m[0.592ms] [34;1m[rows:1][0m SELECT count(*) FROM `sys_api` WHERE `sys_api`.`deleted_at` IS NULL 
+2023-01-29 14:41:07.816+0800 ::1 20.2712ms info GET 200 /api/v1/sys-api?pageIndex=2&pageSize=10 2b6844bf-f251-4a91-9a70-336f32f11eb3 
+2023-01-29 14:41:59.622+0800 trace fba41994-abdf-426b-be21-250fae4fa316 [32m/home/wingwu/go-dev/go-admin/common/actions/permission.go:54 [0m[33m[3.194ms] [34;1m[rows:1][0m SELECT sys_user.user_id,sys_role.role_id,sys_user.dept_id,sys_role.data_scope FROM `sys_user` left join sys_role on sys_role.role_id = sys_user.role_id WHERE sys_user.user_id = '1'
+2023-01-29 14:41:59.623+0800 trace 4db15076-6be2-4bb9-9510-9ed185bae01a [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_dict_data.go:115 [0m[33m[2.493ms] [34;1m[rows:2][0m SELECT * FROM `sys_dict_data` WHERE `sys_dict_data`.`dict_type` like '%sys_normal_disable%' AND `sys_dict_data`.`deleted_at` IS NULL
+2023-01-29 14:41:59.623+0800 ::1 3.0234ms info GET 200 /api/v1/dict-data/option-select?dictType=sys_normal_disable 4db15076-6be2-4bb9-9510-9ed185bae01a 
+2023-01-29 14:41:59.626+0800 trace fba41994-abdf-426b-be21-250fae4fa316 [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_user.go:32 [0m[33m[1.977ms] [34;1m[rows:1][0m SELECT * FROM `sys_dept` WHERE `sys_dept`.`dept_id` = 1 AND `sys_dept`.`deleted_at` IS NULL
+2023-01-29 14:41:59.626+0800 trace fba41994-abdf-426b-be21-250fae4fa316 [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_user.go:32 [0m[33m[2.999ms] [34;1m[rows:1][0m SELECT * FROM `sys_user` WHERE `sys_user`.`deleted_at` IS NULL LIMIT 10
+2023-01-29 14:41:59.626+0800 trace 5dbaeeb1-1b56-4eb9-b6ae-c4e4cdaf4dfe [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_config.go:161 [0m[33m[5.309ms] [34;1m[rows:1][0m SELECT * FROM `sys_config` WHERE config_key = 'sys_user_initPassword' ORDER BY `sys_config`.`config_key` LIMIT 1
+2023-01-29 14:41:59.626+0800 ::1 5.5827ms info GET 200 /api/v1/configKey/sys_user_initPassword 5dbaeeb1-1b56-4eb9-b6ae-c4e4cdaf4dfe 
+2023-01-29 14:41:59.627+0800 trace 3ffe3a47-1b73-4fe8-aac3-4046726e4596 [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_dept.go:156 [0m[33m[5.288ms] [34;1m[rows:5][0m SELECT * FROM `sys_dept` WHERE `sys_dept`.`deleted_at` IS NULL
+2023-01-29 14:41:59.627+0800 ::1 5.5239ms info GET 200 /api/v1/deptTree 3ffe3a47-1b73-4fe8-aac3-4046726e4596 
+2023-01-29 14:41:59.627+0800 trace ba636ae6-3e52-4e03-bd93-c3f4d1110924 [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_dict_data.go:115 [0m[33m[5.654ms] [34;1m[rows:3][0m SELECT * FROM `sys_dict_data` WHERE `sys_dict_data`.`dict_type` like '%sys_user_sex%' AND `sys_dict_data`.`deleted_at` IS NULL
+2023-01-29 14:41:59.627+0800 ::1 6.2274ms info GET 200 /api/v1/dict-data/option-select?dictType=sys_user_sex ba636ae6-3e52-4e03-bd93-c3f4d1110924 
+2023-01-29 14:41:59.629+0800 trace fba41994-abdf-426b-be21-250fae4fa316 [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_user.go:33 [0m[33m[2.822ms] [34;1m[rows:1][0m SELECT count(*) FROM `sys_user` WHERE `sys_user`.`deleted_at` IS NULL 
+2023-01-29 14:41:59.629+0800 ::1 9.8493ms info GET 200 /api/v1/sys-user?pageIndex=1&pageSize=10 fba41994-abdf-426b-be21-250fae4fa316 
+2023-01-29 14:42:08.365+0800 trace 7eb285fe-b100-45e0-89ca-98ac78cb15ad [32m/home/wingwu/go-dev/go-admin/common/actions/permission.go:54 [0m[33m[1.321ms] [34;1m[rows:1][0m SELECT sys_user.user_id,sys_role.role_id,sys_user.dept_id,sys_role.data_scope FROM `sys_user` left join sys_role on sys_role.role_id = sys_user.role_id WHERE sys_user.user_id = '1'
+2023-01-29 14:42:08.477+0800 trace 7eb285fe-b100-45e0-89ca-98ac78cb15ad [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_user.go:252 [0m[33m[110.608ms] [34;1m[rows:1][0m SELECT * FROM `sys_dept` WHERE `sys_dept`.`dept_id` = 1 AND `sys_dept`.`deleted_at` IS NULL
+2023-01-29 14:42:08.477+0800 trace 7eb285fe-b100-45e0-89ca-98ac78cb15ad [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_user.go:252 [0m[33m[111.610ms] [34;1m[rows:1][0m SELECT * FROM `sys_user` WHERE `sys_user`.`user_id` = 1 AND `sys_user`.`deleted_at` IS NULL ORDER BY `sys_user`.`user_id` LIMIT 1
+2023-01-29 14:42:08.478+0800 trace 7eb285fe-b100-45e0-89ca-98ac78cb15ad [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_user.go:256 [0m[33m[0.770ms] [34;1m[rows:1][0m SELECT * FROM `sys_role` WHERE `sys_role`.`role_id` = 1 AND `sys_role`.`deleted_at` IS NULL
+2023-01-29 14:42:08.507+0800 trace 7eb285fe-b100-45e0-89ca-98ac78cb15ad [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_user.go:260 [0m[33m[1.300ms] [34;1m[rows:1][0m SELECT * FROM `sys_post` WHERE `sys_post`.`post_id` = 1 AND `sys_post`.`deleted_at` IS NULL
+2023-01-29 14:42:08.507+0800 ::1 143.2096ms info GET 200 /api/v1/user/profile 7eb285fe-b100-45e0-89ca-98ac78cb15ad 
+2023-01-29 14:43:03.065+0800 trace 91a66ffa-13cf-4ca4-8aa8-1e8810679f71 [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_opera_log.go:28 [0m[33m[1.094ms] [34;1m[rows:0][0m SELECT * FROM `sys_opera_log` ORDER BY `sys_opera_log`.`created_at` desc LIMIT 10
+2023-01-29 14:43:03.066+0800 trace 3e1c44c5-1be5-419a-94de-ae8cd65cdc3f [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_dict_data.go:115 [0m[33m[1.208ms] [34;1m[rows:2][0m SELECT * FROM `sys_dict_data` WHERE `sys_dict_data`.`dict_type` like '%sys_common_status%' AND `sys_dict_data`.`deleted_at` IS NULL
+2023-01-29 14:43:03.066+0800 ::1 1.6506ms info GET 200 /api/v1/dict-data/option-select?dictType=sys_common_status 3e1c44c5-1be5-419a-94de-ae8cd65cdc3f 
+2023-01-29 14:43:03.066+0800 trace 91a66ffa-13cf-4ca4-8aa8-1e8810679f71 [32m/home/wingwu/go-dev/go-admin/app/admin/service/sys_opera_log.go:29 [0m[33m[0.979ms] [34;1m[rows:1][0m SELECT count(*) FROM `sys_opera_log` 
+2023-01-29 14:43:03.066+0800 ::1 2.6955ms info GET 200 /api/v1/sys-opera-log?pageIndex=1&pageSize=10&createdAtOrder=desc 91a66ffa-13cf-4ca4-8aa8-1e8810679f71 

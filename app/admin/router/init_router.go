@@ -1,12 +1,14 @@
 package router
 
 import (
+	nurseRouter "go-admin/app/nurse/router"
 	"os"
+
+	common "go-admin/common/middleware"
 
 	"github.com/gin-gonic/gin"
 	log "github.com/go-admin-team/go-admin-core/logger"
 	"github.com/go-admin-team/go-admin-core/sdk"
-	common "go-admin/common/middleware"
 )
 
 // InitRouter 路由初始化，不要怀疑，这里用到了
@@ -37,4 +39,6 @@ func InitRouter() {
 	// 注册业务路由
 	// TODO: 这里可存放业务路由，里边并无实际路由只有演示代码
 	InitExamplesRouter(r, authMiddleware)
+
+	nurseRouter.InitBusinessRouter(r, authMiddleware)
 }
